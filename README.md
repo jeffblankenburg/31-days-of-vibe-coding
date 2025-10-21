@@ -105,3 +105,9 @@ Whether you're here to learn, experiment, or challenge the ideas, welcome. The f
 - Hashtag: `#VibeCoding`
 
 **Questions?** Open an issue or start a discussion. Let's learn together.
+
+## License
+
+This work is licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+
+You're free to use, modify, translate, or republish this content for any purpose - just provide attribution.
