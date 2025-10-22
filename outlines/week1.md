@@ -5,7 +5,7 @@
 ## Day 1 – What Is Vibe Coding?
 
 **Abstract:**  
-Vibe Coding is the art of staying in flow while using AI as your creative pair-programmer. It’s not about outsourcing your brain; it’s about accelerating intuition. This post defines the practice, the mindset, and the rules of engagement—and why observability becomes your new seatbelt when you’re no longer the only one writing code.
+Vibe Coding is the art of staying in flow while using AI as your creative pair-programmer. It's not about outsourcing your brain; it's about accelerating intuition. This post defines the practice, the mindset, and the rules of engagement, and why observability becomes your new seatbelt when you're no longer the only one writing code.
 
 ### Outline
 1. **Opening Anecdote** – Describe the first time you felt “in flow” with an AI model.  
@@ -28,7 +28,7 @@ Vibe Coding is the art of staying in flow while using AI as your creative pair-p
 ## Day 2 – The AI Coding Landscape: Claude, ChatGPT, Gemini, and Copilot
 
 **Abstract:**  
-A side-by-side comparison of today’s leading AI coding partners. We’ll give each the same challenge, examine the results, and talk about how instrumentation and observability reveal the truth behind “smart” code.
+A side-by-side comparison of today's leading AI coding partners. I'll give each the same challenge, examine the results, and talk about how instrumentation and observability reveal the truth behind "smart" code.
 
 ### Outline
 1. **Setup** – Explain the test scenario (e.g., small API build).  
@@ -51,7 +51,7 @@ A side-by-side comparison of today’s leading AI coding partners. We’ll give 
 ## Day 3 – Prompt Like a Pro: Writing for Machines, Thinking Like a Dev
 
 **Abstract:**  
-Great prompts feel like good API design: clear contracts, explicit intent, graceful failure. Learn a repeatable framework for writing technical prompts that yield reliable, readable, testable code—including how to inject observability expectations right into the request.
+Great prompts feel like good API design: clear contracts, explicit intent, graceful failure. Learn a repeatable framework for writing technical prompts that yield reliable, readable, testable code, including how to inject observability expectations right into the request.
 
 ### Outline
 1. **Why Prompting Matters** – Garbage in, hallucination out.  
@@ -74,7 +74,7 @@ Great prompts feel like good API design: clear contracts, explicit intent, grace
 ## Day 4 – Establishing Your Vibe: Context, Style, and Personality
 
 **Abstract:**  
-Your AI partner learns by example. Feed it your naming conventions, patterns, and humor so its code feels like yours. This post covers creating a “style primer” that keeps the AI aligned with your identity—and your team’s observability standards.
+Your AI partner learns by example. Feed it your naming conventions, patterns, and humor so its code feels like yours. This post covers creating a "style primer" that keeps the AI aligned with your identity and your team's observability standards.
 
 ### Outline
 1. **Defining ‘Vibe’** – Beyond syntax; it’s voice and intent.  
@@ -97,7 +97,7 @@ Your AI partner learns by example. Feed it your naming conventions, patterns, an
 ## Day 5 – Building a Vibe-Ready Environment
 
 **Abstract:**  
-Flow requires frictionless tools. We’ll configure editors, terminals, and AI plug-ins so generation and verification happen in one place. Bonus: wiring up automatic traces to Dynatrace or any observability platform.
+Flow requires frictionless tools. I'll show you how to configure editors, terminals, and AI plug-ins so generation and verification happen in one place. Bonus: wiring up automatic traces to Dynatrace or any observability platform.
 
 ### Outline
 1. **Philosophy of Flow** – Reduce context switching.  
@@ -120,7 +120,7 @@ Flow requires frictionless tools. We’ll configure editors, terminals, and AI p
 ## Day 6 – The Flow Loop: Iterate, Evaluate, Refine
 
 **Abstract:**  
-Vibe Coding is a rhythm: prompt → generate → evaluate → refine. We’ll show how short loops outperform big one-shot generations and how observability data can feed directly into those iterations.
+Vibe Coding is a rhythm: prompt → generate → evaluate → refine. I'll show how short loops outperform big one-shot generations and how observability data can feed directly into those iterations.
 
 ### Outline
 1. **Define the Loop** – Keep sessions under 5 minutes.  
@@ -143,7 +143,7 @@ Vibe Coding is a rhythm: prompt → generate → evaluate → refine. We’ll sh
 ## Day 7 – Guardrails and Ground Truths
 
 **Abstract:**  
-AI can move fast—and break production. Learn to spot, test, and fix hallucinations before they ship. We’ll connect automated testing with runtime observability so your safety nets are as agile as your prompts.
+AI can move fast and break production. Learn to spot, test, and fix hallucinations before they ship. I'll show how to connect automated testing with runtime observability so your safety nets are as agile as your prompts.
 
 ### Outline
 1. **Common Failure Modes** – Wrong assumptions, missing imports, silent fails.  

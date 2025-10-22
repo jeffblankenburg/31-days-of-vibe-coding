@@ -5,7 +5,7 @@
 ## Day 24 – The Psychology of Flow
 
 **Abstract:**  
-Vibe Coding isn’t just about speed—it’s about presence. We’ll dig into the psychology of flow: that elusive state where hours disappear and productivity peaks. You’ll learn how to maintain it when coding with AI, and how observability helps you stay calm by providing constant feedback instead of uncertainty.
+Vibe Coding isn’t just about speed, it’s about presence. We’ll dig into the psychology of flow: that elusive state where hours disappear and productivity peaks. You’ll learn how to maintain it when coding with AI, and how observability helps you stay calm by providing constant feedback instead of uncertainty.
 
 ### Outline
 1. **Defining Flow** – Csikszentmihalyi meets pair programming.  
@@ -20,7 +20,7 @@ Vibe Coding isn’t just about speed—it’s about presence. We’ll dig into t
 - Optional study links on flow psychology for developers.
 
 ### Call to Action
-- Do one 90-minute flow session with full focus—log before/after productivity notes.  
+- Do one 90-minute flow session with full focus, log before/after productivity notes.  
 - Analytics: track self-reported session completions via form or post replies.
 
 ---
@@ -28,7 +28,7 @@ Vibe Coding isn’t just about speed—it’s about presence. We’ll dig into t
 ## Day 25 – Team Vibes: Scaling AI Collaboration
 
 **Abstract:**  
-When your entire dev team starts vibe coding, chaos can follow—unless you create shared standards. This post covers how to introduce AI collaboration at scale: team style guides, review rituals, and shared observability dashboards to keep everyone aligned.
+When your entire dev team starts vibe coding, chaos can follow, unless you create shared standards. This post covers how to introduce AI collaboration at scale: team style guides, review rituals, and shared observability dashboards to keep everyone aligned.
 
 ### Outline
 1. **Team Dynamics** – From solo speed to shared rhythm.  
@@ -51,7 +51,7 @@ When your entire dev team starts vibe coding, chaos can follow—unless you crea
 ## Day 26 – Data, Privacy, and IP in Vibe Coding
 
 **Abstract:**  
-AI-assisted development raises big questions: Who owns the code? What about customer data or secrets accidentally shared in prompts? We’ll explore safe practices, tools, and policies for vibe coding securely—and how observability can help detect leaks or misuse.
+AI-assisted development raises big questions: Who owns the code? What about customer data or secrets accidentally shared in prompts? We’ll explore safe practices, tools, and policies for vibe coding securely, and how observability can help detect leaks or misuse.
 
 ### Outline
 1. **The Risk Landscape** – Prompt leaks, model retention, legal ambiguity.  
@@ -74,7 +74,7 @@ AI-assisted development raises big questions: Who owns the code? What about cust
 ## Day 27 – Vibe Coding for Open Source
 
 **Abstract:**  
-Open source thrives on visibility and contribution—two things AI can accelerate. This post explores how to use AI responsibly in open source: generating docs, writing tests, and contributing PRs that maintain quality and transparency.
+Open source thrives on visibility and contribution, two things AI can accelerate. This post explores how to use AI responsibly in open source: generating docs, writing tests, and contributing PRs that maintain quality and transparency.
 
 ### Outline
 1. **AI’s Role in OSS** – Contribution velocity vs credibility.  
@@ -97,7 +97,7 @@ Open source thrives on visibility and contribution—two things AI can accelerat
 ## Day 28 – AI-Driven Architecture: From Monoliths to Microservices
 
 **Abstract:**  
-AI isn’t just writing functions—it’s rethinking systems. We’ll use AI to design a migration from a monolith to microservices, prompting it for architecture decisions, dependency maps, and observability configurations that show how everything connects.
+AI isn’t just writing functions, it’s rethinking systems. We’ll use AI to design a migration from a monolith to microservices, prompting it for architecture decisions, dependency maps, and observability configurations that show how everything connects.
 
 ### Outline
 1. **When to Break the Monolith** – Signs it’s time to split.  
@@ -143,7 +143,7 @@ The danger of vibe coding is losing your voice. This post argues for the irrepla
 ## Day 30 – Measuring the Impact of Vibe Coding
 
 **Abstract:**  
-If you can’t measure it, you can’t improve it. We’ll define how to measure the actual ROI of vibe coding—developer velocity, error rates, test coverage, and developer happiness—and how to track it all through observability data.
+If you can’t measure it, you can’t improve it. We’ll define how to measure the actual ROI of vibe coding, developer velocity, error rates, test coverage, and developer happiness, and how to track it all through observability data.
 
 ### Outline
 1. **Defining Success** – Speed, quality, satisfaction.  
@@ -166,7 +166,7 @@ If you can’t measure it, you can’t improve it. We’ll define how to measure
 ## Day 31 – The Future of the Vibe
 
 **Abstract:**  
-The final chapter of the series looks ahead: What happens when IDEs become conversational, tests write themselves, and AI understands your architecture? We’ll imagine where vibe coding leads next—and how observability platforms like Dynatrace might evolve into your AI’s operational nervous system.
+The final chapter of the series looks ahead: What happens when IDEs become conversational, tests write themselves, and AI understands your architecture? We’ll imagine where vibe coding leads next, and how observability platforms like Dynatrace might evolve into your AI’s operational nervous system.
 
 ### Outline
 1. **Recap of the Journey** – How far we’ve come in 31 days.  

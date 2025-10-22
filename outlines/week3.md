@@ -5,7 +5,7 @@
 ## Day 16 – From Prompt to Product: Shipping AI-Accelerated Software
 
 **Abstract:**  
-It’s one thing to co-write code with AI. It’s another to ship it confidently. This post covers how to transform AI-generated snippets into real, deployable software—complete with version control, code reviews, tests, and observability pipelines that prove you’re production-ready.
+It’s one thing to co-write code with AI. It’s another to ship it confidently. This post covers how to transform AI-generated snippets into real, deployable software, complete with version control, code reviews, tests, and observability pipelines that prove you’re production-ready.
 
 ### Outline
 1. **The Gap Between Code and Product** – AI can write, but it can’t ship.  
@@ -51,7 +51,7 @@ AI-generated code can come with sneaky side effects: unverified dependencies, ou
 ## Day 18 – The AI Pair Programming Playbook
 
 **Abstract:**  
-Pair programming with AI isn’t like pairing with a human—it’s faster, more literal, and infinitely patient. Learn to define roles, alternate turns, and establish conversational structure so your AI pair feels like a true collaborator instead of an autocomplete engine.
+Pair programming with AI isn’t like pairing with a human, it’s faster, more literal, and infinitely patient. Learn to define roles, alternate turns, and establish conversational structure so your AI pair feels like a true collaborator instead of an autocomplete engine.
 
 ### Outline
 1. **Mindset Shift** – Treat AI as a partner, not a servant.  
@@ -97,7 +97,7 @@ Different models have different vibes. Claude thinks before it types. ChatGPT ex
 ## Day 20 – Prompt Libraries and Reusable Patterns
 
 **Abstract:**  
-Stop reinventing prompts. Start versioning them. We’ll build a personal library of reusable prompt templates for coding, testing, and documentation—complete with naming conventions and observability-friendly defaults.
+Stop reinventing prompts. Start versioning them. We’ll build a personal library of reusable prompt templates for coding, testing, and documentation, complete with naming conventions and observability-friendly defaults.
 
 ### Outline
 1. **The Case for Libraries** – Prompts are code; treat them that way.  
@@ -120,7 +120,7 @@ Stop reinventing prompts. Start versioning them. We’ll build a personal librar
 ## Day 21 – Context Is King: Memory, Docs, and State
 
 **Abstract:**  
-AI forgets everything—unless you remind it. This post explores how to manage context: keeping the AI aware of your architecture, files, and progress without overwhelming it. Bonus: how observability data can act as your system’s external memory.
+AI forgets everything, unless you remind it. This post explores how to manage context: keeping the AI aware of your architecture, files, and progress without overwhelming it. Bonus: how observability data can act as your system’s external memory.
 
 ### Outline
 1. **The Forgetfulness Problem** – Stateless models and session resets.  
@@ -143,7 +143,7 @@ AI forgets everything—unless you remind it. This post explores how to manage c
 ## Day 22 – AI in the Build Pipeline
 
 **Abstract:**  
-Once your code builds, the AI can help make sense of it—changelogs, test summaries, release notes, even post-deployment analysis. We’ll integrate AI into CI/CD to create smarter, self-describing releases.
+Once your code builds, the AI can help make sense of it, changelogs, test summaries, release notes, even post-deployment analysis. We’ll integrate AI into CI/CD to create smarter, self-describing releases.
 
 ### Outline
 1. **The Modern Pipeline** – Automation beyond testing.  
@@ -166,7 +166,7 @@ Once your code builds, the AI can help make sense of it—changelogs, test summa
 ## Day 23 – Vibe Coding Beyond Code: UX, Copy, and Design
 
 **Abstract:**  
-Your AI can do more than code—it can help design your product. From writing microcopy to generating UI mockups, this post explores how to extend your vibe coding mindset to front-end design and user experience.
+Your AI can do more than code, it can help design your product. From writing microcopy to generating UI mockups, this post explores how to extend your vibe coding mindset to front-end design and user experience.
 
 ### Outline
 1. **Broadening the Vibe** – Creativity doesn’t stop at code.  

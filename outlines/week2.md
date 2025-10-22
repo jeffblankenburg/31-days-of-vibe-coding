@@ -5,7 +5,7 @@
 ## Day 8 – Explaining the Why: Teaching AI to Think in Context
 
 **Abstract:**  
-When you tell AI *what* to do, it gives you a function. When you tell it *why*, it builds a system. This post explores how to feed context into your prompts—business logic, data constraints, performance targets—so the AI becomes your design partner instead of a code vending machine.
+When you tell AI *what* to do, it gives you a function. When you tell it *why*, it builds a system. This post explores how to feed context into your prompts (business logic, data constraints, performance targets) so the AI becomes your design partner instead of a code vending machine.
 
 ### Outline
 1. **Introduction** – The problem with “just write the code” prompts.  
@@ -28,7 +28,7 @@ When you tell AI *what* to do, it gives you a function. When you tell it *why*, 
 ## Day 9 – The Vibe Coding Commandments
 
 **Abstract:**  
-Every great methodology has a manifesto. This one’s simple: speed, clarity, observability, and flow. We’ll break down the 11 core commandments of vibe coding—rules that keep you productive and your AI accountable.
+Every great methodology has a manifesto. This one's simple: speed, clarity, observability, and flow. I'll break down the 11 core commandments of vibe coding, rules that keep you productive and your AI accountable.
 
 ### Outline
 1. **Introduction** – Why codifying behavior matters.  
@@ -51,7 +51,7 @@ Every great methodology has a manifesto. This one’s simple: speed, clarity, ob
 ## Day 10 – Using AI for System Design
 
 **Abstract:**  
-AI can code functions, but it can also architect systems. We’ll use vibe coding techniques to design a small service from scratch—APIs, databases, observability strategy—and watch the AI help reason about trade-offs like scalability and cost.
+AI can code functions, but it can also architect systems. I'll use vibe coding techniques to design a small service from scratch (APIs, databases, observability strategy) and show how the AI helps reason about trade-offs like scalability and cost.
 
 ### Outline
 1. **Reframing AI as an Architect** – From syntax helper to system thinker.  
@@ -74,7 +74,7 @@ AI can code functions, but it can also architect systems. We’ll use vibe codin
 ## Day 11 – Code Reviews with AI
 
 **Abstract:**  
-Your AI can review your pull requests, catch errors, and suggest refactors—but it needs coaching. We’ll show you how to set up effective AI code reviews, complete with custom checklists and observability awareness to catch silent failures.
+Your AI can review your pull requests, catch errors, and suggest refactors, but it needs coaching. I'll show you how to set up effective AI code reviews, complete with custom checklists and observability awareness to catch silent failures.
 
 ### Outline
 1. **Intro Story** – The moment you realize your AI reviewer never sleeps.  
@@ -97,7 +97,7 @@ Your AI can review your pull requests, catch errors, and suggest refactors—but
 ## Day 12 – Documentation That Writes Itself
 
 **Abstract:**  
-If you’re already writing clean code and clear prompts, the docs are halfway done. This post shows how to use AI to generate documentation that reads like a human wrote it—and even references real metrics and traces to make it operationally useful.
+If you're already writing clean code and clear prompts, the docs are halfway done. This post shows how to use AI to generate documentation that reads like a human wrote it and even references real metrics and traces to make it operationally useful.
 
 ### Outline
 1. **The Case for AI Docs** – The cost of outdated documentation.  
@@ -120,7 +120,7 @@ If you’re already writing clean code and clear prompts, the docs are halfway d
 ## Day 13 – Testing Without the Pain
 
 **Abstract:**  
-No one loves writing tests—except your AI. We’ll show how to turn vibe coding into a test-driven flow, where the AI helps you generate, expand, and validate tests automatically. We’ll also connect them to runtime metrics for real proof of coverage.
+No one loves writing tests, except your AI. I'll show how to turn vibe coding into a test-driven flow, where the AI helps you generate, expand, and validate tests automatically. I'll also show how to connect them to runtime metrics for real proof of coverage.
 
 ### Outline
 1. **Testing Mindset** – Reframing AI as a test generator.  
@@ -143,7 +143,7 @@ No one loves writing tests—except your AI. We’ll show how to turn vibe codin
 ## Day 14 – Debugging in Dialogue
 
 **Abstract:**  
-Debugging is no longer about staring at stack traces—it’s a conversation. Learn how to feed your AI logs, errors, and trace snippets and walk it through diagnosing and fixing the issue collaboratively.
+Debugging is no longer about staring at stack traces. It's a conversation. Learn how to feed your AI logs, errors, and trace snippets and walk it through diagnosing and fixing the issue collaboratively.
 
 ### Outline
 1. **Why Dialogue Debugging Works** – Natural reasoning beats grep.  
@@ -166,7 +166,7 @@ Debugging is no longer about staring at stack traces—it’s a conversation. Le
 ## Day 15 – Refactoring at Scale
 
 **Abstract:**  
-AI can help you refactor entire systems—but only if you can trust the result. We’ll cover techniques for large-scale refactoring, testing, and verification using AI, and how observability becomes your safety net during code transformation.
+AI can help you refactor entire systems, but only if you can trust the result. I'll cover techniques for large-scale refactoring, testing, and verification using AI, and how observability becomes your safety net during code transformation.
 
 ### Outline
 1. **Motivation** – Why large refactors are a great AI use case.  
