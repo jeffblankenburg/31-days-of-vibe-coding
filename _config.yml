@@ -11,7 +11,7 @@ github_username: jeffblankenburg
 
 # Build settings
 markdown: kramdown
-theme: tactile
+theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag

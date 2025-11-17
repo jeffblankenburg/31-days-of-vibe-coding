@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Home
+title: 31 Days of Vibe Coding
 ---
 
 # 31 Days of Vibe Coding
