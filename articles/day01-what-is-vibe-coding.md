@@ -1,8 +1,8 @@
 # Day 1: What Is Vibe Coding?
 
-I built collectyourcards.com entirely with AI.
+I built [collectyourcards.com]() entirely with AI.
 
-The entire site. Authentication system. Universal search across 793,740 cards. Achievement system with over 1,000 achievements. Social features. Crowdsourcing. Admin tools. Spreadsheet generation. The database schema. The API. The frontend. Production deployment to Azure.
+The entire site. Authentication system. Universal search across 800,000+ cards (that will eventually be 20 million+). Achievement system with over 1,000 achievements. Social features. Crowdsourcing. Admin tools. Spreadsheet generation. The API. The frontend.
 
 All of it. With AI writing the code while I stayed in flow.
 
@@ -12,9 +12,9 @@ That's vibe coding.
 
 Before we get into how I built it, here's what the site does. It's a comprehensive platform for sports card collectors to catalog and manage their collections.
 
-The database has 793,740 cards. 6,965 players. 135 teams. Users can search for cards, track what they own, see their collection value, earn achievements for milestones, share with other collectors, and contribute data to improve the platform.
+The database has 800,000 cards. 6,965 players. 135 teams. Users can search for cards, track what they own, see their collection value, earn achievements for milestones, share with other collectors, and contribute data to improve the platform.
 
-The search is order-agnostic. Type "trout 2020 topps chrome auto" or "auto chrome 2020 topps trout" and it works. It extracts player names, years, set names, card types, and serial numbers from your query in any order. Then it finds what you're looking for in under 200 milliseconds.
+The search is universal.  It searches players, teams, sets, and even individual cards.  It even searches for properties of individual cards, like colors and print runs.  Try searching "pink steven kwan", for example. Then it finds what you're looking for in under 200 milliseconds.
 
 The achievement system awards points for collection milestones. First card added. 100 cards collected. Complete a vintage set. Own a 1/1. There are achievements for rookie cards, autographs, specific players, teams, decades, manufacturers, and crowdsourcing contributions.
 
