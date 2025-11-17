@@ -1,187 +1,123 @@
-# 31 Days of Vibe Coding – Week 3 (Days 16–23)
+# 31 Days of Vibe Coding – Week 3: Mastering AI as Your Partner (Days 16–22)
+
+**Theme:** Debugging with AI, handling mistakes, understanding limitations, and avoiding common pitfalls.
 
 ---
 
-## Day 16 – From Prompt to Product: Shipping AI-Accelerated Software
+## Day 16 – Debugging with AI as Your Partner
 
-**Abstract:**  
-It’s one thing to co-write code with AI. It’s another to ship it confidently. This post covers how to transform AI-generated snippets into real, deployable software, complete with version control, code reviews, tests, and observability pipelines that prove you’re production-ready.
+**Abstract:**
+Bugs happen. Learn to debug collaboratively with AI: providing error context, sharing stack traces, explaining expected vs actual behavior, and iterating on fixes. AI becomes your debugging partner, not just a code generator.
 
-### Outline
-1. **The Gap Between Code and Product** – AI can write, but it can’t ship.  
-2. **Versioning AI Output** – Commit strategies and diff reviews.  
-3. **CI/CD Integration** – Automate builds for generated code.  
-4. **Post-Deploy Checks** – Instrument logging and metrics on day one.  
-5. **Production Observability** – Catch drift and regressions automatically.  
-6. **Sustaining the Workflow** – Document your process for reuse.
-
-### Asset Notes
-- `/day16-prompt-to-product/` sample CI/CD YAML + pipeline diagram.  
-- Example `git diff` of AI-generated vs refined code.
-
-### Call to Action
-- Deploy one AI-assisted feature to staging; review its logs and metrics.  
-- Analytics: measure time-to-merge before/after adopting AI.
+**What You'll Learn:**
+- Providing useful error context to AI
+- Sharing stack traces and logs effectively
+- Explaining what you expected vs what happened
+- Iterating on debugging hypotheses
+- Using AI to add debugging instrumentation
+- When AI helps vs hinders debugging
+- Example: Debugging a production bug with AI
 
 ---
 
-## Day 17 – Managing Dependencies and Security in AI-Generated Code
+## Day 17 – Refactoring with AI
 
-**Abstract:**  
-AI-generated code can come with sneaky side effects: unverified dependencies, outdated libraries, or questionable imports. Learn to spot, verify, and monitor these issues using both automated checks and observability integrations.
+**Abstract:**
+Code gets messy. Learn to refactor collaboratively with AI: identifying code smells, explaining refactoring goals, maintaining behavior while improving structure, and keeping tests passing. Use AI to clean up code without breaking it.
 
-### Outline
-1. **Why Dependencies Matter** – AI’s tendency to “hallucinate imports.”  
-2. **Static Checks** – Use tools like `npm audit` and `pip check`.  
-3. **Prompt Tuning** – Ask AI to cite versions and sources.  
-4. **Runtime Monitoring** – Detect anomalies or deprecated calls.  
-5. **Security Hygiene** – Credential handling, data privacy, and logs.  
-6. **Case Example** – Fixing a dependency tree gone wrong.
-
-### Asset Notes
-- `/day17-security/` example prompts for dependency checks.  
-- Optional script integrating Dynatrace anomaly detection.
-
-### Call to Action
-- Run a dependency audit today and patch one outdated library.  
-- Analytics: track GitHub Issues referencing this exercise.
+**What You'll Learn:**
+- Identifying when refactoring is needed
+- Communicating refactoring goals to AI
+- Common AI code smells (repetition, nesting, unclear names)
+- Maintaining tests during refactoring
+- Incremental vs big-bang refactoring
+- Verifying behavior hasn't changed
+- Example: Refactoring messy AI-generated code
 
 ---
 
-## Day 18 – The AI Pair Programming Playbook
+## Day 18 – Working with Existing Codebases
 
-**Abstract:**  
-Pair programming with AI isn’t like pairing with a human, it’s faster, more literal, and infinitely patient. Learn to define roles, alternate turns, and establish conversational structure so your AI pair feels like a true collaborator instead of an autocomplete engine.
+**Abstract:**
+You inherit code. Not yours, not AI-generated, just... there. Learn to use AI with existing code: understanding unfamiliar code, navigating large codebases, adding features safely, and respecting existing patterns. Make AI work with what's already there.
 
-### Outline
-1. **Mindset Shift** – Treat AI as a partner, not a servant.  
-2. **Setting Roles** – “Driver” and “Navigator” dynamics.  
-3. **Turn-Taking Rituals** – Structuring conversation around checkpoints.  
-4. **Feedback Language** – How to coach the AI effectively.  
-5. **Observability Parallels** – Track performance of AI-suggested code in real time.  
-6. **Example Session** – A live pairing transcript.
-
-### Asset Notes
-- `/day18-pairing/` transcript examples and “pairing ritual” template.  
-- Optional VS Code setup guide for chat integration.
-
-### Call to Action
-- Try one full “pairing session” with an AI tool; note what surprised you.  
-- Analytics: track social mentions or survey responses via link.
+**What You'll Learn:**
+- Using AI to understand unfamiliar code
+- Navigating large codebases with AI
+- Adding features without breaking things
+- Respecting existing patterns and conventions
+- Asking AI about code you didn't write
+- Finding where to make changes
+- Example: Adding a feature to a legacy codebase
 
 ---
 
-## Day 19 – Building With Multiple Models
+## Day 19 – When AI Gets It Wrong (and How to Fix It)
 
-**Abstract:**  
-Different models have different vibes. Claude thinks before it types. ChatGPT explains everything. Gemini searches first. This post explores how to orchestrate multiple models into a single cohesive workflow, each playing to its strength.
+**Abstract:**
+AI makes mistakes. Wrong assumptions. Bad patterns. Security holes. Learn to recognize AI errors: spotting hallucinations, catching logic errors, identifying security issues, and correcting AI effectively. Trust, but verify everything.
 
-### Outline
-1. **Model Personalities** – Understanding unique strengths.  
-2. **Workflow Chaining** – Using one AI’s output as another’s input.  
-3. **Example** – Claude for planning → ChatGPT for code → Gemini for docs.  
-4. **Observability Checkpoint** – Tracking quality across tools.  
-5. **Prompt Consistency** – Keeping context aligned between models.  
-6. **Avoiding Chaos** – Managing conflicting outputs and versioning.
-
-### Asset Notes
-- `/day19-multi-model/` example chain script + prompt files.  
-- Optional shell workflow for model orchestration.
-
-### Call to Action
-- Combine two models for your next task; document what each did best.  
-- Analytics: track repo PRs or comments on chain experiments.
+**What You'll Learn:**
+- Common AI mistakes (hallucinations, wrong assumptions)
+- Spotting logic errors in AI code
+- Security vulnerabilities AI introduces
+- How to correct AI effectively
+- When to start over vs iterate
+- Building your error-detection intuition
+- Example: Catching and fixing a critical AI mistake
 
 ---
 
-## Day 20 – Prompt Libraries and Reusable Patterns
+## Day 20 – Understanding AI Strengths and Weaknesses
 
-**Abstract:**  
-Stop reinventing prompts. Start versioning them. We’ll build a personal library of reusable prompt templates for coding, testing, and documentation, complete with naming conventions and observability-friendly defaults.
+**Abstract:**
+AI isn't magic. It has strengths (boilerplate, patterns, common tasks) and weaknesses (novel problems, performance, security). Learn what AI does well and what it struggles with. Play to its strengths, compensate for its weaknesses.
 
-### Outline
-1. **The Case for Libraries** – Prompts are code; treat them that way.  
-2. **Organizing Prompts** – Categories, metadata, versioning.  
-3. **Common Patterns** – CRUD, REST APIs, testing, refactoring.  
-4. **Observability Templates** – Prompts that include logging hooks.  
-5. **Community Sharing** – Managing pull requests for prompt improvements.  
-6. **Governance** – Ensuring quality and avoiding drift.
-
-### Asset Notes
-- `/day20-prompt-library/` structured template repo (Markdown + JSON).  
-- README with usage guidelines and tagging syntax.
-
-### Call to Action
-- Fork the prompt library; contribute one new template.  
-- Analytics: count forks and open PRs.
+**What You'll Learn:**
+- What AI excels at (and why)
+- What AI struggles with (and why)
+- Tasks to always review carefully
+- Compensating for AI weaknesses
+- Combining AI strengths with your expertise
+- Setting realistic expectations
+- Example: Task analysis of AI capabilities
 
 ---
 
-## Day 21 – Context Is King: Memory, Docs, and State
+## Day 21 – Common AI Pitfalls and How to Avoid Them
 
-**Abstract:**  
-AI forgets everything, unless you remind it. This post explores how to manage context: keeping the AI aware of your architecture, files, and progress without overwhelming it. Bonus: how observability data can act as your system’s external memory.
+**Abstract:**
+Everyone makes the same mistakes with AI. Learn the common pitfalls: vague prompts, missing context, over-trusting output, ignoring tests, and shipping without review. Avoid these traps and accelerate your learning.
 
-### Outline
-1. **The Forgetfulness Problem** – Stateless models and session resets.  
-2. **Types of Context** – Code, tests, metrics, documentation.  
-3. **Prompt Layering** – Feeding background selectively.  
-4. **External Memory Stores** – Embeddings, RAG, Git history.  
-5. **Observability as Context** – Real runtime data as the truth source.  
-6. **Practical Example** – Teaching an AI about your repo through metadata.
-
-### Asset Notes
-- `/day21-context/` context-feeding examples + embeddings notebook.  
-- Diagram showing “context boundary” best practices.
-
-### Call to Action
-- Experiment with feeding your project’s README and logs to AI before coding.  
-- Analytics: link clicks to embeddings example.
+**What You'll Learn:**
+- The vague prompt trap (and how to be specific)
+- Missing context mistakes
+- Over-trusting AI output
+- Skipping verification steps
+- Ignoring automated checks
+- Common security mistakes
+- Example: Real pitfalls and their fixes
 
 ---
 
-## Day 22 – AI in the Build Pipeline
+## Day 22 – Code Review for AI-Generated Code
 
-**Abstract:**  
-Once your code builds, the AI can help make sense of it, changelogs, test summaries, release notes, even post-deployment analysis. We’ll integrate AI into CI/CD to create smarter, self-describing releases.
+**Abstract:**
+You review AI code differently than human code. Learn what to look for: security vulnerabilities, performance issues, edge cases AI missed, testing gaps, and maintainability concerns. Build your AI code review checklist.
 
-### Outline
-1. **The Modern Pipeline** – Automation beyond testing.  
-2. **AI-Assisted Build Tasks** – Auto-docs, changelogs, and test reports.  
-3. **Observability Feedback Loop** – Post-deploy metrics into changelogs.  
-4. **Tools & Hooks** – GitHub Actions or Jenkins integrations.  
-5. **Example Workflow** – Commit → build → test → summarize → deploy.  
-6. **Benefits & Risks** – Speed vs accuracy trade-offs.
-
-### Asset Notes
-- `/day22-pipeline/` sample GitHub Actions YAML and AI script templates.  
-- Optional integration code for Dynatrace API summary generation.
-
-### Call to Action
-- Add one AI-assisted step to your pipeline; share your results.  
-- Analytics: monitor repo Actions runs or webhook pings.
+**What You'll Learn:**
+- Security review for AI code
+- Performance and efficiency checks
+- Edge cases AI often misses
+- Test coverage analysis
+- Maintainability evaluation
+- Using automated tools in review
+- Example: Reviewing an AI-generated feature
 
 ---
 
-## Day 23 – Vibe Coding Beyond Code: UX, Copy, and Design
+**Week 3 Summary:**
+You've mastered working with AI as a true partner: debugging collaboratively, refactoring effectively, working with existing code, recognizing when AI gets it wrong, understanding its strengths and weaknesses, avoiding common pitfalls, and reviewing AI-generated code properly. You're now fluent in AI-assisted development.
 
-**Abstract:**  
-Your AI can do more than code, it can help design your product. From writing microcopy to generating UI mockups, this post explores how to extend your vibe coding mindset to front-end design and user experience.
-
-### Outline
-1. **Broadening the Vibe** – Creativity doesn’t stop at code.  
-2. **Prompting for UX** – Write AI prompts that understand audience and tone.  
-3. **Design Iteration Loops** – Generate, critique, refine.  
-4. **Microcopy Magic** – Tone consistency across product surfaces.  
-5. **Observability for UX** – Tie usage metrics back to design choices.  
-6. **Case Study** – Use AI to redesign a signup flow.
-
-### Asset Notes
-- `/day23-ux/` prompt examples for UX text and mockups.  
-- Optional Figma export script or image prompt templates.
-
-### Call to Action
-- Let AI rewrite a small part of your UX copy; test user reactions.  
-- Analytics: track click-through rates or engagement deltas.
-
----
+**Next Week:**
+Production reality, the AI agent landscape, ethics and responsibility, and building your personal vibe coding playbook.

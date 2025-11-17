@@ -1,0 +1,40 @@
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+vendor/
+
+# Ruby
+*.gem
+*.rbc
+.bundle/
+.config
+coverage/
+Gemfile.lock
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Logs
+*.log
+
+# Temporary files
+*~
+.#*
+\#*#
+.*.swp
+.*.swo
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Node (if you use any node tools)
+node_modules/
+npm-debug.log
+yarn-error.log

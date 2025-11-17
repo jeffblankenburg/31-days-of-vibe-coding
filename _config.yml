@@ -1,0 +1,53 @@
+# Site settings
+title: 31 Days of Vibe Coding
+email: jeff@jeffblankenburg.com
+description: >-
+  Learn to ship production features faster with AI. Real tactics from building
+  collectyourcards.com - no hype, no theory, just what actually works.
+baseurl: ""
+url: "https://31daysofvibecoding.com"
+twitter_username: jblankenburg
+github_username: jeffblankenburg
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Permalink structure
+permalink: /:year/:month/:day/:title/
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /day/:title/
+
+# Exclude from processing
+exclude:
+  - archive/
+  - examples/
+  - outlines/
+  - resources/
+  - node_modules/
+  - vendor/
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - CLAUDE.md
+  - VOICE.md
+  - LICENSE
+
+# Show excerpts on home page
+show_excerpts: true
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Jeff Blankenburg"

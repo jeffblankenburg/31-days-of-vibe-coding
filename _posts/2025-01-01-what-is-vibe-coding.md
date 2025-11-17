@@ -1,4 +1,10 @@
-# Day 1: What Is Vibe Coding?
+---
+layout: post
+title: "Day 1: What Is Vibe Coding?"
+date: 2025-01-01
+author: Jeff Blankenburg
+excerpt: "I built collectyourcards.com entirely with AI. 793,740 cards. Universal search. Achievement system. The whole thing. Here's how vibe coding works."
+---
 
 I built collectyourcards.com entirely with AI.
 
@@ -139,9 +145,3 @@ Look at collectyourcards.com. It's live at collectyourcards.com. Browse the card
 Then think about what you could build if you learned to work with AI like this. Not just faster. Actually faster without sacrificing quality.
 
 That's what the next 30 days are about.
-
----
-
-**Tomorrow:** [Day 2: Plan Features, Not Functions](day02-plan-features-not-functions.md)
-
-**Subscribe:** Watch this repo or follow along at [31daysofvibecoding.com](https://31daysofvibecoding.com)

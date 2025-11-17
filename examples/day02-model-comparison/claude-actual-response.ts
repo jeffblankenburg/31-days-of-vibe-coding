@@ -1,3 +1,6 @@
+// Claude's actual response to the weather API challenge
+// Generated: 2025-01-23
+
 interface WeatherData {
   city: string;
   temperature: number;
@@ -28,6 +31,10 @@ async function fetchWeather(city: string): Promise<WeatherData> {
     throw new Error('WEATHER_API_KEY environment variable is required');
   }
 
+  if (!city || city.trim().length === 0) {
+    throw new Error('City name is required');
+  }
+
   for (let attempt = 0; attempt <= maxRetries; attempt++) {
     try {
       console.log(`[fetchWeather] Requesting weather for ${city} (attempt ${attempt + 1}/${maxRetries + 1})`);
@@ -36,6 +43,7 @@ async function fetchWeather(city: string): Promise<WeatherData> {
         `${baseUrl}/weather?city=${encodeURIComponent(city)}&key=${apiKey}`
       );
 
+      // Handle rate limiting with exponential backoff
       if (response.status === 429) {
         if (attempt < maxRetries) {
           const backoffMs = Math.pow(2, attempt) * 1000;
@@ -45,19 +53,27 @@ async function fetchWeather(city: string): Promise<WeatherData> {
           await new Promise(resolve => setTimeout(resolve, backoffMs));
           continue;
         } else {
-          throw new Error(`Rate limit exceeded for ${city} after ${maxRetries + 1} attempts`);
+          const error = new Error(`Rate limit exceeded for ${city} after ${maxRetries + 1} attempts`);
+          console.error(`[fetchWeather] ${error.message}`);
+          throw error;
         }
       }
 
+      // Handle other HTTP errors
       if (!response.ok) {
-        throw new Error(
+        const error = new Error(
           `Weather API returned ${response.status}: ${response.statusText}`
         );
+        console.error(`[fetchWeather] HTTP error for ${city}:`, error.message);
+        throw error;
       }
 
       const data: WeatherAPIResponse = await response.json();
 
-      console.log(`[fetchWeather] Successfully fetched weather for ${city}`);
+      console.log(`[fetchWeather] Successfully fetched weather for ${city}`, {
+        temp: data.temp,
+        conditions: data.weather
+      });
 
       return {
         city,
@@ -68,28 +84,41 @@ async function fetchWeather(city: string): Promise<WeatherData> {
       };
 
     } catch (error) {
+      // If we've exhausted retries, throw the error
       if (attempt === maxRetries) {
-        console.error(`[fetchWeather] Failed to fetch weather for ${city}:`, error);
+        console.error(`[fetchWeather] Failed to fetch weather for ${city} after ${maxRetries + 1} attempts:`, error);
         throw error;
       }
 
-      // Don't retry on non-429 HTTP errors
+      // Don't retry on non-retryable HTTP errors (4xx except 429)
       if (error instanceof Error && error.message.includes('Weather API returned')) {
-        console.error(`[fetchWeather] Non-retryable error for ${city}:`, error);
-        throw error;
+        const statusMatch = error.message.match(/returned (\d+)/);
+        if (statusMatch) {
+          const status = parseInt(statusMatch[1]);
+          // Only retry on 429, 5xx, or network errors
+          if (status >= 400 && status < 500 && status !== 429) {
+            console.error(`[fetchWeather] Non-retryable client error for ${city}:`, error.message);
+            throw error;
+          }
+        }
       }
 
-      // Network errors get retried
+      // Retry on network errors and 5xx errors
       const backoffMs = Math.pow(2, attempt) * 1000;
       console.warn(
-        `[fetchWeather] Network error for ${city}. Retrying in ${backoffMs}ms:`,
-        error
+        `[fetchWeather] Error for ${city}. Retrying in ${backoffMs}ms (attempt ${attempt + 1}/${maxRetries + 1}):`,
+        error instanceof Error ? error.message : 'Unknown error'
       );
       await new Promise(resolve => setTimeout(resolve, backoffMs));
     }
   }
 
+  // This should never be reached, but TypeScript requires it
   throw new Error(`Unexpected failure fetching weather for ${city}`);
 }
 
 export { fetchWeather, WeatherData };
+
+// Example usage:
+// const weather = await fetchWeather('Seattle');
+// console.log(`Temperature in ${weather.city}: ${weather.temperature}°F`);
