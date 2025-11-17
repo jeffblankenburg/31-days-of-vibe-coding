@@ -6,12 +6,12 @@ description: >-
   collectyourcards.com - no hype, no theory, just what actually works.
 baseurl: ""
 url: "https://31daysofvibecoding.com"
-twitter_username: jblankenburg
+twitter_username: jeffblankenburg
 github_username: jeffblankenburg
 
 # Build settings
 markdown: kramdown
-theme: minima
+theme: tactile
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
