@@ -303,4 +303,4 @@ Create a reference component file for your project. Start simple:
 
 Then ask AI to build something simple using that reference. A form. A settings page. A card list.
 
-Watch how much better the output matches your application.
+Watch how much better the output matches your application. 
