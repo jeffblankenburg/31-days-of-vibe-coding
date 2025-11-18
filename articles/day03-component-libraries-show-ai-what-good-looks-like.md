@@ -450,87 +450,116 @@ Check for:
 List all issues and suggest how to fix them using our existing components.
 ```
 
-## Real Example: Building a Dashboard
+## Real Example: Building the Collection Page
 
-I needed a dashboard with stats cards, a chart, and a recent activity list. Here's what I asked:
+I needed to build the collection page for collectyourcards.com. Users needed to see all their cards in a grid, with filters for year, manufacturer, and card type. Each card should show the player photo, card details, and an indicator if they own it.
 
+Here's the GitHub Issue I wrote:
+
+> Build a collection page that displays a user's sports cards in a responsive grid. Each card should show:
+> - Player photo (150x200px placeholder if no image)
+> - Player name and team
+> - Card year and manufacturer
+> - Card number and series
+> - Ownership badge (green checkmark if owned, gray if not)
+>
+> Include filters at the top:
+> - Year dropdown (2020-2024)
+> - Manufacturer dropdown (Topps, Panini, Upper Deck, etc)
+> - Card type checkboxes (Rookie, Autograph, Relic)
+>
+> Reference components/reference.tsx for design system.
+> Use our Card component for each sports card display.
+> Use our FilterBar component for the filters.
+> Follow our grid layout pattern for card galleries.
+
+Before I had the reference library, here's what AI generated:
+
+```jsx
+<div style={{display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '20px'}}>
+  {cards.map(card => (
+    <div key={card.id} style={{border: '1px solid #ccc', padding: '10px'}}>
+      <img src={card.image} width="150" />
+      <h3>{card.playerName}</h3>
+      <p>{card.year} {card.manufacturer}</p>
+      <span>{card.owned ? '✓ Owned' : 'Not owned'}</span>
+    </div>
+  ))}
+</div>
 ```
-Build a dashboard page with:
-1. Four stat cards showing metrics (users, revenue, conversion, growth)
-2. A line chart for the last 30 days
-3. Recent activity list showing last 10 actions
 
-Reference components/reference.tsx.
-Use our Card component for stats and sections.
-Use our PageContainer for layout.
-Follow the grid pattern shown in reference for stat cards.
-Use colors.success for positive metrics, colors.danger for negative.
-```
+Inline styles. Generic borders. No responsive behavior. Doesn't match my color scheme. Basic HTML instead of my components.
+
+After creating the reference library with my actual components, I gave the same prompt with one addition: "Reference components/reference.tsx."
 
 AI generated this:
 
 ```jsx
 import { PageContainer } from '@/components/ui/layout';
 import { Card } from '@/components/ui/card';
+import { FilterBar } from '@/components/ui/filters';
+import { Badge } from '@/components/ui/badge';
 
-export function Dashboard() {
+export function CollectionPage() {
   return (
     <PageContainer>
-      <h1 className="text-3xl font-bold text-slate-900 mb-8">Dashboard</h1>
+      <h1 className="text-3xl font-bold text-slate-900 mb-6">My Collection</h1>
 
-      {/* Stats grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-        <Card>
-          <div className="text-sm text-slate-600 mb-1">Total Users</div>
-          <div className="text-3xl font-bold text-slate-900">12,543</div>
-          <div className="text-sm text-green-600 mt-2">↑ 12% from last month</div>
-        </Card>
+      <FilterBar className="mb-8">
+        <Select label="Year" options={yearOptions} />
+        <Select label="Manufacturer" options={manufacturerOptions} />
+        <CheckboxGroup label="Card Type" options={cardTypeOptions} />
+      </FilterBar>
 
-        <Card>
-          <div className="text-sm text-slate-600 mb-1">Revenue</div>
-          <div className="text-3xl font-bold text-slate-900">$48,293</div>
-          <div className="text-sm text-green-600 mt-2">↑ 8% from last month</div>
-        </Card>
-
-        <Card>
-          <div className="text-sm text-slate-600 mb-1">Conversion Rate</div>
-          <div className="text-3xl font-bold text-slate-900">3.24%</div>
-          <div className="text-sm text-red-600 mt-2">↓ 2% from last month</div>
-        </Card>
-
-        <Card>
-          <div className="text-sm text-slate-600 mb-1">Growth Rate</div>
-          <div className="text-3xl font-bold text-slate-900">24%</div>
-          <div className="text-sm text-green-600 mt-2">↑ 4% from last month</div>
-        </Card>
-      </div>
-
-      {/* Chart section */}
-      <Card title="Revenue Trend" className="mb-8">
-        <div className="h-80">
-          {/* Chart component here */}
-        </div>
-      </Card>
-
-      {/* Recent activity */}
-      <Card title="Recent Activity">
-        <div className="space-y-4">
-          {activities.map(activity => (
-            <div key={activity.id} className="flex items-center gap-4">
-              <div className="text-sm text-slate-900">{activity.description}</div>
-              <div className="text-sm text-slate-500 ml-auto">{activity.time}</div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {cards.map(card => (
+          <Card key={card.id} className="hover:shadow-lg transition-shadow">
+            <div className="relative">
+              <img
+                src={card.imageUrl || '/placeholder-card.png'}
+                alt={card.playerName}
+                className="w-full h-48 object-cover rounded-t-lg"
+              />
+              {card.owned && (
+                <Badge
+                  variant="success"
+                  className="absolute top-2 right-2"
+                >
+                  ✓ Owned
+                </Badge>
+              )}
             </div>
-          ))}
-        </div>
-      </Card>
+
+            <div className="p-4">
+              <h3 className="font-semibold text-slate-900 mb-1">
+                {card.playerName}
+              </h3>
+              <p className="text-sm text-slate-600 mb-2">
+                {card.team}
+              </p>
+              <div className="flex justify-between text-sm text-slate-500">
+                <span>{card.year} {card.manufacturer}</span>
+                <span>#{card.cardNumber}</span>
+              </div>
+              {card.isRookie && (
+                <Badge variant="primary" className="mt-2">
+                  Rookie
+                </Badge>
+              )}
+            </div>
+          </Card>
+        ))}
+      </div>
     </PageContainer>
   );
 }
 ```
 
-Perfect. Same card style as the rest of my app. Same spacing. Same typography. Same color usage for positive and negative metrics. Same layout pattern.
+This matches collectyourcards.com perfectly. Same card styling. Same color tokens. Same responsive grid breakpoints. Same badge components. Same hover effects.
 
-Zero time spent fixing styling.
+I didn't fix a single style. AI got it right because it saw exactly what my Card, Badge, and FilterBar components look like in the reference file.
+
+The filters work. The grid is responsive. The badges use the right colors. The spacing matches every other page. Zero rework.
 
 ## When AI Creates Something New
 
