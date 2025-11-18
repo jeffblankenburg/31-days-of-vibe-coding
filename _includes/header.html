@@ -1,0 +1,136 @@
+<header class="site-header" role="banner">
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">
+      <img src="/images/short_header.png" alt="{{ site.title }}" class="site-logo">
+    </a>
+
+    <nav class="site-nav">
+      <div class="day-navigation">
+        {% if page.url == "/" %}
+          <a href="{{ "/" | relative_url }}" class="day-box home-box active" title="Home">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+            </svg>
+          </a>
+        {% else %}
+          <a href="{{ "/" | relative_url }}" class="day-box home-box" title="Home">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+            </svg>
+          </a>
+        {% endif %}
+        {% assign sorted_posts = site.posts | sort: 'date' %}
+        {% for post in sorted_posts %}
+          {% comment %}Show all posts if show_all_posts is true, otherwise only show published{% endcomment %}
+          {% if site.show_all_posts or post.date <= site.time %}
+            {% assign day_number = post.date | date: "%-d" %}
+            {% if page.url == post.url %}
+              <a href="{{ post.url | relative_url }}" class="day-box active" title="{{ post.title }}">
+                {{ day_number }}
+              </a>
+            {% else %}
+              <a href="{{ post.url | relative_url }}" class="day-box" title="{{ post.title }}">
+                {{ day_number }}
+              </a>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    </nav>
+  </div>
+</header>
+
+<style>
+.site-header {
+  border-top: none;
+  border-bottom: 1px solid #fdbe01;
+  background-color: transparent;
+  margin-top:10px;
+}
+
+.site-header .wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.site-title {
+  margin-bottom: 15px;
+  display: block;
+}
+
+.site-logo {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.site-nav {
+  width: 100%;
+}
+
+.day-navigation {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.day-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #002d46;
+  color: #fdbe01;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.day-box:visited {
+  background: #002d46;
+  color: #fdbe01;
+  text-decoration: none;
+}
+
+.day-box.active {
+  background: #fdbe01;
+  color: #002d46;
+  font-weight: 700;
+}
+
+.home-box {
+  font-size: 20px;
+}
+
+.day-box:hover {
+  background: #fdbe01;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  color: #002d46;
+  text-decoration: none;
+}
+
+.day-box:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Mobile responsive */
+@media screen and (max-width: 600px) {
+  .day-navigation {
+    gap: 6px;
+  }
+
+  .day-box {
+    width: 36px;
+    height: 36px;
+    font-size: 13px;
+  }
+}
+</style>

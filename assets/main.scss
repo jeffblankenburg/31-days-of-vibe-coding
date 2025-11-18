@@ -1,0 +1,69 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/* Import Google Font for headers */
+@import url('https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&display=swap');
+
+/* Apply to all headers */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Quantico', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+/* Make h2s particularly striking */
+h2 {
+  font-weight: 700;
+  margin-top: 1em;
+  margin-bottom: 0.8em;
+  color: #002d46;
+}
+
+/* Style h3s */
+h3 {
+  font-weight: 700;
+  margin-top: 0.75em;
+  color: #04a8c3;
+}
+
+/* Conversation styling - left/right aligned */
+blockquote.conversation {
+  border: none;
+  background: transparent;
+  padding: 0.75em 0;
+  margin: 1em 0;
+  font-style: normal;
+}
+
+blockquote.conversation p {
+  margin: 1em 0;
+  line-height: 1.6;
+}
+
+/* User messages - left aligned */
+blockquote.conversation > p:nth-child(odd) {
+  text-align: left;
+  color: #002d46;
+  font-weight: 500;
+}
+
+/* AI messages - right aligned */
+blockquote.conversation > p:nth-child(even) {
+  text-align: right;
+  color: #495057;
+  font-style: italic;
+}
+
+/* Show the bold labels */
+blockquote.conversation strong:first-child {
+  font-weight: 700;
+  color: #002d46;
+}
+
+/* Bold text headers (like "**Try This Today:**") */
+p > strong:first-child {
+  margin-top: 1.5em;
+  display: block;
+}

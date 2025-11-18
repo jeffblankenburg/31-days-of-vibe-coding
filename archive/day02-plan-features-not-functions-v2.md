@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Day 2: Fundamental #1 - Plan Features, Not Functions"
-date: 2025-01-02
+date: 2026-01-02
 author: Jeff Blankenburg
 excerpt: "When you ask AI to write a function, you get a function. When you ask AI to implement a feature, you get everything you need to ship."
 ---

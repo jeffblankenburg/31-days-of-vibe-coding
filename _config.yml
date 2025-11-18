@@ -43,6 +43,12 @@ exclude:
 # Show excerpts on home page
 show_excerpts: true
 
+# Show all posts in navigation (set to false for production)
+show_all_posts: true
+
+# Show future-dated posts (set to false for production)
+future: true
+
 # Default front matter
 defaults:
   - scope:
