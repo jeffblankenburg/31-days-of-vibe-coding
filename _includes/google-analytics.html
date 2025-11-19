@@ -5,5 +5,92 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', '{{ site.google_analytics }}');
+  gtag('config', '{{ site.google_analytics }}', {
+    'send_page_view': true,
+    'anonymize_ip': false,
+    'allow_google_signals': true,
+    'allow_ad_personalization_signals': true
+  });
+
+  // Track outbound links to collectyourcards.com
+  document.addEventListener('DOMContentLoaded', function() {
+    // Track all external links
+    document.querySelectorAll('a[href^="http"]').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        const url = this.href;
+        const isExternal = !url.includes(window.location.hostname);
+
+        if (isExternal) {
+          gtag('event', 'click', {
+            'event_category': 'outbound',
+            'event_label': url,
+            'transport_type': 'beacon'
+          });
+        }
+      });
+    });
+
+    // Track GitHub Issue Backlog button clicks
+    document.querySelectorAll('a[href*="github.com"]').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        gtag('event', 'click', {
+          'event_category': 'github',
+          'event_label': this.href,
+          'transport_type': 'beacon'
+        });
+      });
+    });
+
+    // Track day navigation clicks
+    document.querySelectorAll('.day-box').forEach(function(dayBox) {
+      dayBox.addEventListener('click', function(e) {
+        const dayNumber = this.textContent.trim();
+        const dayTitle = this.getAttribute('title') || 'Unknown';
+
+        gtag('event', 'click', {
+          'event_category': 'navigation',
+          'event_label': 'day_' + dayNumber,
+          'value': dayNumber
+        });
+      });
+    });
+
+    // Track scroll depth
+    let scrollDepth = 0;
+    let scrollTimer = null;
+
+    window.addEventListener('scroll', function() {
+      clearTimeout(scrollTimer);
+      scrollTimer = setTimeout(function() {
+        const currentDepth = Math.round((window.scrollY + window.innerHeight) / document.body.scrollHeight * 100);
+
+        if (currentDepth > scrollDepth && currentDepth % 25 === 0) {
+          scrollDepth = currentDepth;
+          gtag('event', 'scroll', {
+            'event_category': 'engagement',
+            'event_label': scrollDepth + '%',
+            'value': scrollDepth
+          });
+        }
+      }, 150);
+    });
+
+    // Track time on page
+    let startTime = Date.now();
+    let timeTracked = false;
+
+    // Track when user leaves or switches tabs
+    document.addEventListener('visibilitychange', function() {
+      if (document.visibilityState === 'hidden' && !timeTracked) {
+        const timeSpent = Math.round((Date.now() - startTime) / 1000);
+        gtag('event', 'timing_complete', {
+          'event_category': 'engagement',
+          'name': 'time_on_page',
+          'value': timeSpent,
+          'event_label': window.location.pathname
+        });
+        timeTracked = true;
+      }
+    });
+  });
 </script>

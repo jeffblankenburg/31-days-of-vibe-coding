@@ -54,6 +54,12 @@ Changing button text? Issue.
 Adding OAuth? Issue.
 Entire new dashboard? Issue.
 
+<div style="text-align: left; margin: 2em 0;">
+  <a href="https://github.com/jeffblankenburg/collectyourcards.com/issues?q=is%3Aissue&page=1" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 16px 32px; background: #002d46; color: #fdbe01; text-decoration: none; border-radius: 8px; font-weight: 700; font-size: 16px; transition: all 0.2s ease; box-shadow: 0 4px 8px rgba(0,0,0,0.15);">
+    See The GitHub Issue Backlog
+  </a>
+</div>
+
 This gives me three things I didn't have before:
 
 **1. Time to think.** Writing an issue forces me to articulate what I actually want. Not just "add OAuth" but why, what providers, how it affects existing users, what happens on errors.
@@ -70,6 +76,8 @@ A GitHub Issue for AI isn't the same as a ticket for a human developer. Humans c
 
 Here's what I include in every issue:
 
+<div style="background: #f6f8fa; border: 1px solid #d0d7de; border-radius: 6px; padding: 20px; margin: 1.5em 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;" markdown="1">
+
 **User need:** What is the user trying to accomplish? Not "add a button" but "users need a way to export their data."
 
 **Acceptance criteria:** What does done look like? "User clicks export, gets a CSV with all their data, download starts immediately."
@@ -79,6 +87,8 @@ Here's what I include in every issue:
 **Constraints:** What are the limitations? "File must be under 100MB. If larger, send via email. Rate limit to 1 export per hour per user."
 
 **Non-functional requirements:** Security, performance, observability. "Log all export requests. Alert if export takes over 10 seconds. No PII in logs."
+
+</div>
 
 That's enough for AI to plan an implementation. And enough for me to review whether AI understood what I wanted.
 
@@ -135,9 +145,7 @@ My issue tracker looks busy. Lots of small issues. That's good. It means I'm shi
 
 ## The Workflow in Practice
 
-Here's what my daily workflow looks like now:
-
-**Morning:** Review the issue backlog. Pick the highest priority issue. Read it to refresh context.
+Here's what my workflow looks like now:
 
 **Planning:** Tell AI "Implement Issue #52. Read the issue, propose a complete implementation plan with architecture, data model, API design, error handling, tests, deployment steps, and observability. Don't write code yet."
 

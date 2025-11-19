@@ -26,7 +26,7 @@ Summary, encouragement, and what to do next.
 
 Begin with [Day 1: What Is Vibe Coding?](/day/what-is-vibe-coding/) to understand what this is all about and see proof it works.
 
-Then follow the fundamentals, one per day. Each article is 1,500+ words with real examples from building collectyourcards.com.
+Then follow the fundamentals, one per day. Each article is a deep look at best practices in AI-assisted software development with real examples from building collectyourcards.com.
 
 ## About This Series
 

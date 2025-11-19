@@ -386,21 +386,6 @@ telemetryService.logError('Login failed', error, {
 
 Structured logging lets you query, filter, and alert on specific fields. Console logs are just strings.
 
-## What About Cost?
-
-<!-- Observability platforms charge for data volume. Won't this get expensive?
-
-For collectyourcards.com:
-- ~50,000 API requests per day
-- ~500 authentication events per day
-- ~10,000 database queries per day
-
-Total telemetry data: ~2GB per month
-
-Cost in Dynatrace: $0 (within free tier)
-
-You'd have to be doing millions of requests per day before cost becomes a concern. And if you're at that scale, observability is non-negotiable anyway. -->
-
 ## Tomorrow
 
 You have observability. You can see what your AI-generated code is doing in production. But you're still writing prompts from scratch every time.
