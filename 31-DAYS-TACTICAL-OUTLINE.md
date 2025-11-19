@@ -50,7 +50,7 @@
 
 **The Problem:** You shipped AI-generated code and have no idea if it's working in production.
 
-**What You'll Learn:** How to build observability into every prompt so you know immediately when something breaks.
+**What You'll Learn:** How to build observability into every prompt so you know immediately when something breaks.  Using OpenTelemetry as the example.
 
 **Prompt Templates:**
 - "Add comprehensive logging to this function"

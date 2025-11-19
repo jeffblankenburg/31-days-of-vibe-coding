@@ -9,6 +9,9 @@ url: "https://31daysofvibecoding.com"
 twitter_username: jeffblankenburg
 github_username: jeffblankenburg
 
+# Google Analytics
+google_analytics: G-VTGNZ4TLF1
+
 # Build settings
 markdown: kramdown
 theme: minima
