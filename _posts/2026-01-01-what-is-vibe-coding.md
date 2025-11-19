@@ -135,7 +135,7 @@ Stop being sloppy with your prompts. Start treating AI like a development team t
 
 **Try This Today:**
 
-Take a look at collectyourcards.com. Browse the card database. Run a search. Add some cards to your collection. See what's possible when you use AI correctly.
+Take a look at collectyourcards.com. Browse the card database. Run a search. Add some cards to your collection. See what's possible when you use AI effectively.
 
 Then think about what you could build if you learned to work with AI like this. Not just faster. Actually faster without sacrificing quality.
 

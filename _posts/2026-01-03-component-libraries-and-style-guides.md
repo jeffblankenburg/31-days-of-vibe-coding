@@ -49,7 +49,7 @@ Here's the fix. Create a reference component library that shows AI exactly what 
 
 Not documentation. Not a design system PDF. Actual code that AI can read and replicate.
 
-I created a single file to manage <a href="https://collectyourcards.com/design-system-demo" target="_new">my design system</a>. It's not part of my application, but I did let it ship to production so I could share it with you.. It's purely for AI to reference. (<a href="https://github.com/jeffblankenburg/collectyourcards.com/blob/main/client/src/pages/DesignSystemDemo.jsx" target="_new">See the source code here.</a>)
+I created a single file to manage <a href="https://collectyourcards.com/design-system-demo" target="_new">my design system</a>. (Seriously, click that link.  It's worth a look.) It's not part of my application, but I did let it ship to production so I could share it with you.. It's purely for AI to reference. (<a href="https://github.com/jeffblankenburg/collectyourcards.com/blob/main/client/src/pages/DesignSystemDemo.jsx" target="_new">See the source code here.</a>)
 
 It includes all of the elements I might use on a page:
 
@@ -230,7 +230,7 @@ My prompt:
 ```
 Create a toast notification component.
 
-Reference components/reference.tsx for our design system.
+Reference /design-guide-demo for our design system.
 
 Match these patterns:
 - Use our color tokens for success/error/warning variants
