@@ -388,7 +388,7 @@ Structured logging lets you query, filter, and alert on specific fields. Console
 
 ## What About Cost?
 
-Observability platforms charge for data volume. Won't this get expensive?
+<!-- Observability platforms charge for data volume. Won't this get expensive?
 
 For collectyourcards.com:
 - ~50,000 API requests per day
@@ -399,7 +399,7 @@ Total telemetry data: ~2GB per month
 
 Cost in Dynatrace: $0 (within free tier)
 
-You'd have to be doing millions of requests per day before cost becomes a concern. And if you're at that scale, observability is non-negotiable anyway.
+You'd have to be doing millions of requests per day before cost becomes a concern. And if you're at that scale, observability is non-negotiable anyway. -->
 
 ## Tomorrow
 

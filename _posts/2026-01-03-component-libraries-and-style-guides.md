@@ -56,9 +56,14 @@ It includes all of the elements I might use on a page:
 - A table for viewing cards
 - A table for viewing your collection.
 - Card elements to show players, teams, and sets in a concise way.
+
+<img src="/images/card_components.png" alt="Different page elements to represent players, teams, sets, and cards.">
+
 - Different header elements
 - Buttons, and colors, and icons, oh my!
 - One of my proudest creations: the "team circle."  It's an element to show a team without using any of the copyrighted images that are generally associated with a team.  They're used everywhere.
+
+<img src="/images/team_circles.png" alt="Circles of different sizes representing sports teams.">
 
 ## How to Use the Reference Library
 
