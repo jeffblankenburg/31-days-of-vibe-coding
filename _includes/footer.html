@@ -22,6 +22,64 @@
       </div>
     </div>
 
+    <div class="footer-subscribe">
+      <h3>Subscribe</h3>
+      <p>Get each day's article delivered to your inbox.</p>
+      <form
+        action="https://buttondown.com/api/emails/embed-subscribe/jeffblankenburg"
+        method="post"
+        target="popupwindow"
+        onsubmit="window.open('https://buttondown.com/jeffblankenburg', 'popupwindow')"
+        class="embeddable-buttondown-form"
+      >
+        <input type="email" name="email" placeholder="your@email.com" required />
+        <input type="submit" value="Subscribe" />
+      </form>
+    </div>
+
   </div>
 
 </footer>
+
+<style>
+.footer-subscribe {
+  border-top: 1px solid #e8e8e8;
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+.footer-subscribe h3 {
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem 0;
+}
+.footer-subscribe p {
+  margin: 0 0 1rem 0;
+  color: #828282;
+  font-size: 0.9rem;
+}
+.footer-subscribe form {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.footer-subscribe input[type="email"] {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  min-width: 220px;
+}
+.footer-subscribe input[type="submit"] {
+  padding: 0.5rem 1.25rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.footer-subscribe input[type="submit"]:hover {
+  background: #0056b3;
+}
+</style>

@@ -41,6 +41,23 @@ layout: default
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
 
+<!-- Email Subscribe Form -->
+<div class="subscribe-box">
+  <h3>Get new articles in your inbox</h3>
+  <p>Subscribe to get each day's article delivered directly to you.</p>
+  <form
+    action="https://buttondown.com/api/emails/embed-subscribe/jeffblankenburg"
+    method="post"
+    target="popupwindow"
+    onsubmit="window.open('https://buttondown.com/jeffblankenburg', 'popupwindow')"
+    class="embeddable-buttondown-form"
+  >
+    <input type="email" name="email" placeholder="your@email.com" required />
+    <input type="submit" value="Subscribe" />
+  </form>
+  <p class="subscribe-note">No spam. Unsubscribe anytime.</p>
+</div>
+
 <!-- Utterances Comments -->
 <script src="https://utteranc.es/client.js"
         repo="jeffblankenburg/31-days-of-vibe-coding"
@@ -64,5 +81,52 @@ layout: default
 }
 .post-navigation .next {
   text-align: right;
+}
+
+/* Subscribe Box */
+.subscribe-box {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+.subscribe-box h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+}
+.subscribe-box p {
+  margin: 0 0 1rem 0;
+  color: #6c757d;
+}
+.subscribe-box form {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.subscribe-box input[type="email"] {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 1rem;
+  min-width: 250px;
+}
+.subscribe-box input[type="submit"] {
+  padding: 0.5rem 1.5rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.subscribe-box input[type="submit"]:hover {
+  background: #0056b3;
+}
+.subscribe-box .subscribe-note {
+  font-size: 0.85rem;
+  margin: 0.75rem 0 0 0;
 }
 </style>
