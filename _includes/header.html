@@ -39,7 +39,7 @@
             {% endif %}
           {% endfor %}
           <div class="subscribe-dropdown">
-            <button class="day-box subscribe-box" title="Subscribe" onclick="toggleSubscribeForm()">
+            <button class="day-box subscribe-btn" title="Subscribe" onclick="toggleSubscribeForm()">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
                 <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
               </svg>
@@ -158,19 +158,19 @@
   display: flex;
 }
 
-.subscribe-box {
+.subscribe-btn {
   background: #fdbe01;
   color: #002d46;
   border: none;
   cursor: pointer;
 }
 
-.subscribe-box:visited {
+.subscribe-btn:visited {
   background: #fdbe01;
   color: #002d46;
 }
 
-.subscribe-box:hover {
+.subscribe-btn:hover {
   background: #002d46;
   color: #fdbe01;
 }
