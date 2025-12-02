@@ -22,11 +22,6 @@
               </svg>
             </a>
           {% endif %}
-          <a href="https://buttondown.com/jeffblankenburg" class="day-box subscribe-box" title="Subscribe" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-              <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-            </svg>
-          </a>
           {% assign sorted_posts = site.posts | sort: 'date' %}
           {% for post in sorted_posts %}
             {% comment %}Show all posts if show_all_posts is true, otherwise only show published{% endcomment %}
@@ -43,6 +38,11 @@
               {% endif %}
             {% endif %}
           {% endfor %}
+          <a href="https://buttondown.com/jeffblankenburg" class="day-box subscribe-box" title="Subscribe" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+              <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+          </a>
         </div>
       </nav>
     </div>
