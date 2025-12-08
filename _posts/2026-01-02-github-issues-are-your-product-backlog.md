@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Day 2: GitHub Issues Are Your AI's Product Backlog"
+title: "Day 2: Managing Your Backlog with AI"
 date: 2026-01-02
 author: Jeff Blankenburg
 excerpt: "Stop throwing half-formed ideas at AI. Write GitHub Issues like you're managing a development team. Get complete, working features on the first try."

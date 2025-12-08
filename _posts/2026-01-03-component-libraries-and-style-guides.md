@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Day 3: Component Libraries & Style Guides"
+title: "Day 3: Keeping Your UI Consistent"
 date: 2026-01-03
 author: Jeff Blankenburg
 excerpt: "AI doesn't know what your design system looks like unless you show it."
