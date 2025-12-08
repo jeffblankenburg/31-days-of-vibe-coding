@@ -7,19 +7,26 @@
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li class="p-name">Jeff Blankenburg</li>
-            <li><a class="u-email" href="mailto:jeff.blankenburg@dynatrace.com</a></li>
-        </ul>
+        <div class="footer-author">
+          <img src="/images/headshot.png" alt="Jeff Blankenburg" class="author-headshot">
+          <span class="p-name">Jeff Blankenburg</span>
+        </div>
       </div>
 
       <div class="footer-col footer-col-2">
         {%- include social.html -%}
       </div>
+    </div>
 
-      <div class="footer-col footer-col-3">
-        <p>This series focuses on real learnings from hundreds of hours of vibe coding software.</p>
-      </div>
+    <div class="footer-description">
+      <p>This completely free series focuses on real learnings from hundreds of hours of vibe coding software.</p>
+    </div>
+
+    <div class="footer-sponsor">
+      <p>Thanks to <a href="https://www.dynatrace.com" target="_blank" rel="noopener">Dynatrace</a> for the time and support to create this series.</p>
+      <a href="https://www.dynatrace.com" target="_blank" rel="noopener">
+        <img src="/images/dynatrace.png" alt="Dynatrace" class="sponsor-logo">
+      </a>
     </div>
 
     <div class="footer-subscribe">
@@ -81,5 +88,57 @@
 }
 .footer-subscribe input[type="submit"]:hover {
   background: #0056b3;
+}
+
+.footer-sponsor {
+  border-top: 1px solid #e8e8e8;
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+.footer-sponsor p {
+  margin: 0 0 1rem 0;
+  color: #828282;
+  font-size: 0.9rem;
+}
+.footer-sponsor a {
+  color: #5ead35;
+}
+.footer-sponsor a:hover {
+  color: #73be4a;
+}
+.sponsor-logo {
+  height: 40px;
+  width: auto;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+.sponsor-logo:hover {
+  opacity: 1;
+}
+
+.footer-description {
+  margin-top: 1rem;
+}
+.footer-description p {
+  color: #e0e0e0;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.footer-author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.author-headshot {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.footer-author .p-name {
+  color: #e0e0e0;
+  font-weight: 500;
 }
 </style>

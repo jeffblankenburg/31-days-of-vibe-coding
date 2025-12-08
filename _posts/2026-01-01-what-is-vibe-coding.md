@@ -10,7 +10,7 @@ I built [collectyourcards.com](https://collectyourcards.com) entirely with AI.
 
 All of it. With AI writing the code while I stayed in flow.
 
-That's vibe coding.
+That's vibe coding. 
 
 If you haven't tried it before, buckle up. For me, asking an AI agent to build something, and then having that thing built minutes later is like dopamine. I find myself working longer, and shipping more features because it is an absolute joy to build software again.
 

@@ -1,0 +1,5 @@
+# Development overrides
+# Use with: bundle exec jekyll serve --config _config.yml,_config_dev.yml
+
+show_all_posts: true
+future: true

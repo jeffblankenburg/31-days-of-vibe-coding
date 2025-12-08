@@ -36,7 +36,7 @@ The difference? I'm thinking like a product manager and tech lead, not a program
 
 This was way better. But I made a mistake.  I assumed that AI would complete everything I asked it to do, on the first try.  I didn't have a backlog.  I was dropping great ideas left and right, and many of them were never completed.
 
-## Stage 3: Features in GitHub Issues (The Right Way)
+## Stage 3: Spec-Driven Development (The Right Way)
 
 I was still doing all of this in the chat. I'd open a conversation and start typing: "Build me OAuth login." Then halfway through I'd remember I also needed rate limiting. And maybe password reset. Oh, and we're using Postgres, not MySQL. By the time I got my thoughts together, I'd wasted 10 minutes and the AI had already started writing code based on incomplete requirements.
 

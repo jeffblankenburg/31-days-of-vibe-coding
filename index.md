@@ -4,9 +4,9 @@ layout: default
 
 # 31 Days of Vibe Coding
 
-I built an entire website entirely with AI. [collectyourcards.com](https://collectyourcards.com) lets users track and manage their sports card collections without all of the work. 900,000+ sports cards (and growing). Universal search. Achievement system. Social features. Production deployment. All of it.
+I built an entire website with AI. [collectyourcards.com](https://collectyourcards.com) lets users track and manage their sports card collections without all of the work. 900,000+ sports cards (and growing). Universal search. Achievement system. Social features. Sales tracking down to the cost of an individual envelope. All of it.
 
-This series teaches you how to write real software with artificial intelligence.<br/>No theory. No hype. Just the tactics that actually worked.
+This completely free series teaches you how to write real software with artificial intelligence.<br/>No theory. No hype. Just the tactics that actually worked.
 
 ## What You'll Learn
 
@@ -24,16 +24,17 @@ Summary, encouragement, and what to do next.
 
 ## Start Here
 
-Begin with [Day 1: What Is Vibe Coding?](/day/what-is-vibe-coding/) to understand what this is all about and see proof it works.
+<a href="https://buttondown.com/api/emails/embed-subscribe/jeffblankenburg">Subscribe today</a>, and you'll start receiving a new vibe coding article every day in January 2026.
+<!-- Begin with [Day 1: What Is Vibe Coding?](/day/what-is-vibe-coding/) to understand what this is all about and see proof it works. -->
 
-Then follow the fundamentals, one per day. Each article is a deep look at best practices in AI-assisted software development with real examples from building collectyourcards.com.
+Each article is a deep look at best practices in AI-assisted software development with real examples from building collectyourcards.com.  After the series has concluded, we will continue the conversation as the vibe coding landscape evolves.
 
 ## About This Series
 
 Every article includes:
-- Actual conversations about real topics
-- Honest lessons from what broke
-- Tactics you can use immediately
+- Actual conversations about real AI-assisted software development topics
+- Honest lessons from what didn't work
+- Tactics you should use immediately
 
 ## About The Author
 
