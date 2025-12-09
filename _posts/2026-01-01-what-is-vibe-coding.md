@@ -12,21 +12,21 @@ All of it. With AI writing the code while I stayed in flow.
 
 That's vibe coding. 
 
-If you haven't tried it before, buckle up. For me, asking an AI agent to build something, and then having that thing built minutes later is like dopamine. I find myself working longer, and shipping more features because it is an absolute joy to build software again.
+If you haven't tried it before, buckle up. For me, asking an AI agent to build something, and then having that thing built minutes later is like dopamine. I find myself wanting to work longer, and shipping more features because it is an absolute joy to build software again.
 
 ## What collectyourcards.com Actually Is
 
 Before we get into how I built it, here's what the site does. It's a comprehensive platform for sports card collectors to catalog and manage their collections.
 
-The database has over 900,000 cards. 7,000+ players. 150+ teams. Users can search for cards, track what they own, see their collection value, earn achievements for milestones, share with other collectors, and contribute data to improve the platform.
+The database currently has over 900,000 cards. 7,000+ players. 150+ teams. Users can search for cards, track what they own, see their collection value, earn achievements for milestones, share with other collectors, and contribute data to improve the platform.
 
 The search is universal. Type what you know about a card, and then it finds what you're looking for in under 200 milliseconds.
 
 The site has become a definitive source for complete, downloadable checklists.  It will even show you which ones you already own.
 
-The whole thing is in production. Real users. Real data. Real features.
+The whole thing is in production. 
 
-I built it in about three months. Nights and weekends. With Claude Code writing most of the code.
+I built it in about three months on my nights and weekends. With Claude Code writing every line of code.
 
 <img src="/images/cyc_homepage.png" alt="Description" width="500">
 
@@ -103,7 +103,7 @@ Every article includes real examples from building collectyourcards.com. Real co
 
 ## Why This Matters
 
-I'm not a 10x developer. I'm a regular developer who learned to work effectively with AI.
+I'm not someone who claims to be a 10x developer. I'm a regular developer who learned to work effectively with AI.
 
 Three months ago, collectyourcards.com didn't exist. Now it's in production with real users and real data. That's what vibe coding makes possible.
 

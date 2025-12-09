@@ -218,7 +218,26 @@
 
 ## Week 3: Expert Roles - AI as Your Team (Days 15-21)
 
-### Day 15 – AI as Security Auditor: Finding Vulnerabilities You'd Miss
+### Day 15 – Context, Tokens, and When to Compact ✅ WRITTEN
+
+**The Problem:** Your conversation is getting long, AI is forgetting earlier decisions, and quality is degrading.
+
+**What You'll Learn:** How tokens work, when context starts degrading, and how to compact effectively without losing the thread.
+
+**Key Concepts:**
+- What tokens are and how they're counted
+- The soft limit vs hard limit (attention degradation)
+- Signs of context degradation
+- The /compact command and when to use it
+- Manual compacting for tools without built-in support
+- Token-efficient practices
+- The 30-message checkpoint rule
+
+**Rule of Thumb:** Compact proactively at natural breakpoints, not reactively when things break
+
+---
+
+### Day 16 – AI as Security Auditor: Finding Vulnerabilities You'd Miss
 
 **The Problem:** You need to review AI-generated code for security issues but don't know where to start.
 
@@ -234,7 +253,7 @@
 
 ---
 
-### Day 16 – AI as Performance Auditor: Making Code Fast
+### Day 17 – AI as Performance Auditor: Making Code Fast
 
 **The Problem:** AI writes correct code but it's slow and inefficient.
 
@@ -249,7 +268,7 @@
 
 ---
 
-### Day 17 – AI as Test Generator: Comprehensive Test Coverage
+### Day 18 – AI as Test Generator: Comprehensive Test Coverage
 
 **The Problem:** You need tests for AI-generated code but writing them manually is slow.
 
@@ -265,7 +284,7 @@
 
 ---
 
-### Day 18 – AI as Code Reviewer: Multiple Review Passes
+### Day 19 – AI as Code Reviewer: Multiple Review Passes
 
 **The Problem:** You need to review AI code but one pass isn't enough.
 
@@ -282,7 +301,7 @@
 
 ---
 
-### Day 19 – AI as Debugger: Systematic Bug Hunting
+### Day 20 – AI as Debugger: Systematic Bug Hunting
 
 **The Problem:** There's a bug and you're not sure where to start.
 
@@ -298,7 +317,7 @@
 
 ---
 
-### Day 20 – AI as Architect: Evaluating Design Decisions
+### Day 21 – AI as Architect: Evaluating Design Decisions
 
 **The Problem:** You're not sure if your approach is the best one.
 
@@ -311,22 +330,6 @@
 - "How will this scale?"
 
 **Example:** Architecture review that catches problems early
-
----
-
-### Day 21 – Multi-Persona Review: The Full QA Team
-
-**The Problem:** You need comprehensive review but don't have a team.
-
-**What You'll Learn:** How to orchestrate multiple AI personas for complete code review.
-
-**Prompt Templates:**
-- Complete multi-persona review workflow
-- Security expert + Performance expert + Test expert
-- Synthesizing feedback from all personas
-- Prioritizing issues
-
-**Example:** Full review workflow for a feature
 
 ---
 
