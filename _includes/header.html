@@ -69,6 +69,9 @@
   background-color: transparent;
   padding: 0;
   margin: 0;
+  overflow: visible;
+  position: relative;
+  z-index: 100;
 }
 
 .site-header .wrapper {
@@ -78,6 +81,7 @@
   background-color: #ffffff;
   box-shadow: 60px 0 60px rgba(0, 0, 0, 0.3), -60px 0 60px rgba(0, 0, 0, 0.3);
   border-bottom: 3px solid #fdbe01;
+  overflow: visible;
 }
 
 .header-image-container {
@@ -181,14 +185,14 @@
 .subscribe-form-dropdown {
   display: none;
   position: absolute;
-  right: 0;
+  left: 0;
   top: 48px;
   background: #fff;
   border: 1px solid #e9ecef;
   border-radius: 8px;
   padding: 1rem;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  z-index: 1000;
+  z-index: 9999;
   min-width: 280px;
 }
 
@@ -268,9 +272,16 @@
     font-size: 18px;
   }
 
+  .subscribe-dropdown {
+    position: static;
+  }
+
   .subscribe-form-dropdown {
-    right: auto;
-    left: 0;
+    position: fixed;
+    right: 15px;
+    left: auto;
+    top: auto;
+    max-width: calc(100vw - 30px);
   }
 }
 </style>
