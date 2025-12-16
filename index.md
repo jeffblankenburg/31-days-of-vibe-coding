@@ -10,17 +10,17 @@ This completely free series teaches you how to write real software with artifici
 
 ## What You'll Learn
 
-**Days 1-11: The Fundamentals**
-The non-negotiable principles that separate confident vibe coding from hope-driven development.
+**Week 1: Foundation (Days 1-7)**
+Learning to work with AI. GitHub Issues as your backlog, component libraries, observability, prompting patterns, breaking features into phases, and context management.
 
-**Days 12-29: Tactics & Best Practices**
-Prompt templates, component libraries, context management, breaking features into phases, and more.
+**Week 2: Tactics (Days 8-14)**
+Managing AI's quirks. When to restart, Git as your undo button, agent configuration, teaching AI your patterns, the "common AI mistakes" file, constraining AI, and spotting hallucinations.
 
-**Day 30: Tool Landscape**
-Real comparison of Claude Code, ChatGPT, Copilot, Cursor (and many other agents that don't start with C) across capabilities, cost, and convenience.
+**Week 3: Expert Roles (Days 15-21)**
+AI as your team. Context and tokens, then using AI as security auditor, SRE, test generator, code reviewer, debugger, and architect.
 
-**Day 31: Send-Off**
-Summary, encouragement, and what to do next.
+**Week 4: Production & Mastery (Days 22-31)**
+Real-world tactics. Production debugging, edge cases, deployment automation, refactoring, multi-service work, prompt libraries, the tool landscape, measuring impact, technical debt, and building your personal playbook.
 
 ## Start Here
 
