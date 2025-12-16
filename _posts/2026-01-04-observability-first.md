@@ -6,23 +6,29 @@ author: Jeff Blankenburg
 excerpt: "You shipped AI-generated code. How do you know it works? Build observability into every prompt so you know immediately when something breaks."
 ---
 
-I shipped AI-generated authentication code to production. Email verification. Password reset. Session management. The whole system.
+Let's be honest with each other.
 
-Two days later, users couldn't log in. Password resets were failing. I had no idea why. No logs. No metrics. No traces. Just angry support tickets.
+You're reading a series about vibe coding. You're here because you want to ship code faster with AI. And somewhere in the back of your mind, you're telling yourself: "I'll review every line of code the AI generates."
 
-I spent 6 hours debugging code I didn't write, trying to figure out what broke and when. Eventually found it: a database connection pool exhaustion issue that started happening gradually over 48 hours. If I had proper observability, I would have known in 5 minutes.
+No you won't.
 
-That was the last time I shipped AI code without instrumentation.
+I don't either. None of us do. We test it. We see it work. We ship it. Maybe we skim the code, maybe we spot-check a function or two, but we're not doing a thorough code review of every line Claude writes for us. That's not realistic when you're moving fast.
 
-## The Problem
+Here's the thing: that's not irresponsible. It's only irresponsible if you have no way of knowing what that code is doing in production.
+
+That's where observability comes in. It's your safety net. It's how you know what your AI-generated code is actually doing when real users hit it. It's how you catch the problems you would have caught in code review, except now you catch them with data instead of eyeballs.
+
+## The Real Problem
 
 AI writes optimistic code. It assumes everything works. Database calls succeed. Network requests complete. Users behave correctly. External APIs respond instantly.
 
-Then you ship to production and reality hits. Database queries timeout. API calls fail. Users send malformed data. You have no idea what's happening because you didn't instrument anything.
+You test it locally. It works. You ship it.
 
-The code AI generated works fine in your development environment. It passes tests. It looks good. But you have no visibility into what it's doing in production when real users hit it with real traffic.
+Then production happens. Database queries timeout under load. API calls fail intermittently. Users send malformed data. Edge cases you never considered start appearing. And you have no idea any of this is happening because you didn't instrument anything.
 
-## Why This Happens
+The code AI generated works fine in your development environment. It passes your tests. It looks good when you skim it. But you have no visibility into what it's doing in production.
+
+## Why AI Doesn't Add Observability
 
 When you ask AI to build a feature, it focuses on the happy path. "Build user authentication" gets you login and registration. It doesn't get you:
 
@@ -88,7 +94,7 @@ AI gave me an implementation plan that included building a complete telemetry se
 
 ### Step 1: AI Built the Observability Foundation
 
-The first thing AI did was create a telemetry service using OpenTelemetry. This became the foundation for observing everything the auth system does.
+The first thing AI did was create a telemetry service using [OpenTelemetry](https://opentelemetry.io/). This became the foundation for observing everything the auth system does.
 
 The service tracks three signal types:
 
@@ -199,24 +205,26 @@ Prisma middleware tracks every database query:
 // Success: true
 ```
 
-This caught the connection pool exhaustion issue I mentioned earlier. I could see query times climbing from 12ms to 400ms over 48 hours. That pattern led me straight to the problem.
+This is where you catch the problems that would otherwise blindside you. Query times climbing from 12ms to 400ms over time? You'll see the pattern before it becomes a production incident. Connection pool exhaustion? The metrics will show it happening gradually, not as a sudden outage.
 
-## What I Can See Now
+## What This Gives You
 
-In production, I have complete visibility:
+With proper instrumentation, you get visibility into code you didn't manually review:
 
 **Authentication Dashboard:**
-- Login success rate: 94.2% (last hour)
-- Registration rate: 12 per hour
-- Account lockouts: 3 (last 24 hours)
-- Password resets: 8 (last 24 hours)
-- Average login time: 187ms
+- Login success rate by hour
+- Registration conversion rates
+- Account lockouts and their causes
+- Password reset patterns
+- Average response times per endpoint
 
 **When Something Breaks:**
 
-User reports: "I can't log in."
+Imagine a user reports: "I can't log in."
 
-I check the dashboard:
+Without observability, you're guessing. Reading through code you didn't write. Adding console.log statements. Deploying debug builds. Hours of investigation.
+
+With observability, you check the dashboard:
 - Last login attempt: 2 minutes ago
 - Event: `login_failed`
 - Reason: `Account locked`
@@ -228,7 +236,7 @@ Response: "Your account was locked due to multiple failed login attempts. You ca
 
 Total debugging time: 30 seconds.
 
-Compare that to the 6 hours I spent debugging the connection pool issue when I had no observability.
+This is the trade. You didn't review every line of the authentication code. But you instrumented it so you can see exactly what it's doing. That's a responsible way to ship fast.
 
 ## The Prompt Templates That Work
 
@@ -287,7 +295,7 @@ Signal Types:
 
 Exporters:
 - Development: Console output
-- Production: [Dynatrace/Datadog/Application Insights/etc.]
+- Production: [Dynatrace]
 
 Instrumentation:
 - Auto-instrument: Express, HTTP, database (Prisma/Sequelize/etc.)

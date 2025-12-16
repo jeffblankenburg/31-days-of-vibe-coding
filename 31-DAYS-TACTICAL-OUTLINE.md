@@ -253,18 +253,19 @@
 
 ---
 
-### Day 17 – AI as Performance Auditor: Making Code Fast
+### Day 17 – AI as SRE: Is This Code Operable?
 
-**The Problem:** AI writes correct code but it's slow and inefficient.
+**The Problem:** AI generates code that works but can't be operated. When it breaks at 3am, you have no logs, no metrics, no way to diagnose.
 
-**What You'll Learn:** How to prompt AI to review and optimize for performance.
+**What You'll Learn:** How to audit code for operational readiness: logging, metrics, failure modes, debuggability, and recoverability.
 
 **Prompt Templates:**
-- "Act as a performance expert. Review this code for efficiency issues"
-- "Identify: N+1 queries, missing caching, inefficient algorithms"
-- "Suggest specific optimizations with benchmarks"
+- "Act as an SRE reviewing this code for operational readiness"
+- "What would I wish I had when this breaks at 3am?"
+- "Analyze the failure modes of this code"
+- "Generate a runbook for operating this feature"
 
-**Example:** Performance review that finds real bottlenecks
+**Example:** SRE audit that catches observability gaps before production
 
 ---
 

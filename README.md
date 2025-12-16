@@ -42,7 +42,7 @@ If you're looking for "AI will do everything" tutorials, this isn't that. If you
 ### Week 3: Expert Roles - AI as Your Team
 - Day 15: Context, Tokens, and When to Compact
 - Day 16: AI as Security Auditor: Finding Vulnerabilities You'd Miss
-- Day 17: AI as Performance Auditor: Making Code Fast
+- Day 17: AI as SRE: Is This Code Operable?
 - Day 18: AI as Test Generator: Comprehensive Test Coverage
 - Day 19: AI as Code Reviewer: Multiple Review Passes
 - Day 20: AI as Debugger: Systematic Bug Hunting
