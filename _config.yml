@@ -27,7 +27,6 @@ permalink: /:year/:month/:day/:title/
 collections:
   posts:
     output: true
-    permalink: /day/:title/
 
 # Exclude from processing
 exclude:
