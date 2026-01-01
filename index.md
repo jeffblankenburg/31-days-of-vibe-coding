@@ -8,6 +8,8 @@ I built an entire website with AI. [collectyourcards.com](https://collectyourcar
 
 This completely free series teaches you how to write real software with artificial intelligence.<br/>No theory. No hype. Just the tactics that actually worked.
 
+(Yes, AI helped me build this site, too.)
+
 ## What You'll Learn
 
 **Week 1: Foundation (Days 1-7)**
