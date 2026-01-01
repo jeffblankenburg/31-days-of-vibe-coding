@@ -13,6 +13,9 @@ linkedin_username: jeffblankenburg
 # Google Analytics
 google_analytics: G-VTGNZ4TLF1
 
+# Timezone
+timezone: America/New_York
+
 # Build settings
 markdown: kramdown
 theme: minima
