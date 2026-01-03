@@ -9,10 +9,17 @@ on:
 jobs:
   rebuild:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - name: Trigger GitHub Pages rebuild
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Update timestamp to trigger rebuild
         run: |
-          curl -X POST \
-            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-            -H "Accept: application/vnd.github.v3+json" \
-            https://api.github.com/repos/${{ github.repository }}/pages/builds
+          echo "Last rebuild: $(date -u)" > .last-rebuild
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .last-rebuild
+          git commit -m "Daily rebuild $(date -u +%Y-%m-%d)"
+          git push
