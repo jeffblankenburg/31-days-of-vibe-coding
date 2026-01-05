@@ -22,11 +22,11 @@ So I developed a structure. Five parts that cover everything AI needs to generat
 
 Here's the structure:
 
-**1. Context** - What AI needs to understand before starting
-**2. Intent** - What you're trying to accomplish (the why, not the what)
-**3. Constraints** - The boundaries and requirements
-**4. Examples** - What good looks like
-**5. Verification** - How to know if it worked
+1. **Context** - What AI needs to understand before starting
+2. **Intent** - What you're trying to accomplish (the why, not the what)
+3. **Constraints** - The boundaries and requirements
+4. **Examples** - What good looks like
+5. **Verification** - How to know if it worked
 
 Every prompt needs all five. Skip one, and you'll end up clarifying later.
 
