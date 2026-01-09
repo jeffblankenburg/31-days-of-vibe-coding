@@ -6,92 +6,91 @@ author: Jeff Blankenburg
 excerpt: "AI writes generic code. You want your code. Show AI an example of what good looks like in your codebase, and watch it match your patterns exactly."
 ---
 
-I asked Claude to build a new service for handling card trades. It generated a perfectly reasonable service. Clean code. Good structure. Worked fine.
+Back on Day 3, I showed you how to create a design system reference so AI generates UI that matches your application. The idea was simple: instead of describing what you want, show AI an example of what good looks like.
 
-It looked nothing like my other services.
+That concept doesn't just apply to UI.
 
-My services use dependency injection. Claude's didn't. My services separate database operations into private methods. Claude inlined everything. My services have specific error handling patterns. Claude used generic try/catch.
+Every developer has patterns. The way you structure services. How you handle errors. Where you put validation logic. Your naming conventions. The shape of your test files. These patterns accumulate over years of writing code, debugging production issues, and learning what works for you.
 
-The code worked, but it didn't belong in my codebase. It was a stranger among friends.
+AI doesn't know your patterns. It knows patterns from the internet. From Stack Overflow answers. From GitHub repositories. From training data that represents how millions of developers write code.
 
-So I tried something different. I showed Claude my CardService.ts and said: "Build a TradeService following this exact pattern."
+That's the problem. Without guidance, your AI agent will do what it thinks is right in the moment. It'll generate perfectly reasonable code that looks nothing like the rest of your codebase.
 
-Claude matched it perfectly. Same structure. Same dependency injection. Same error handling. Same method organization. It looked like I wrote it.
+## Generic Code vs Your Code
 
-AI learns faster from examples than from descriptions.
+Ask AI to build a service without any context, and you'll get something like this:
 
-## Why Examples Beat Descriptions
-
-When you describe a pattern in words, there's interpretation. "Use dependency injection" means different things to different developers. Constructor injection? Property injection? Service locator? What gets injected? How?
-
-When you show an example, there's no interpretation. The code is the spec. AI sees exactly what you mean.
-
-Compare these two prompts:
-
-**Description:**
+```typescript
+export class UserService {
+  async getUser(id: string) {
+    try {
+      const user = await db.query('SELECT * FROM users WHERE id = ?', [id]);
+      return user;
+    } catch (error) {
+      console.log('Error fetching user:', error);
+      throw error;
+    }
+  }
+}
 ```
-Build a service for handling trades.
+
+This code works. It's also generic. Maybe you use dependency injection. Maybe you separate database operations into private methods. Maybe you have specific error handling that logs to your telemetry system instead of console.log. Maybe you validate inputs before querying.
+
+AI doesn't know any of that unless you tell it.
+
+You could describe your patterns in words:
+
+```
+Build a user service.
 Use dependency injection for the database and logger.
 Separate database operations into private methods.
-Use our standard error handling pattern.
+Use our standard error handling pattern with telemetry.
+Validate inputs before operations.
 ```
 
-**Example:**
-```
-Build a TradeService following the pattern in server/services/CardService.ts.
-Match the structure exactly: constructor injection, private DB methods, error handling.
-```
+This is better than nothing. But "standard error handling pattern with telemetry" means different things to different developers. There's interpretation. Room for AI to guess wrong.
 
-The second prompt produces better results because AI has a concrete target to match.
+Here's what works better: show it an existing service and say "match this."
 
 ## The Reference Pattern
 
-Here's how to use examples effectively:
+Find a file in your codebase that represents your patterns well. Not average code. Your cleanest, most pattern-compliant code. The file you'd point a new team member to and say "do it like this."
 
-**1. Identify your best code**
-
-What file in your project best represents how you want things done? Not average code. Your cleanest, most pattern-compliant code.
-
-For me, CardService.ts is that file. When I built it, I was careful. It represents what I want all services to look like.
-
-**2. Reference it explicitly**
+Then reference it explicitly:
 
 ```
-Build a new TradeService.
+Build a NotificationService.
 
-Reference: server/services/CardService.ts
+Reference: server/services/UserService.ts
 
 Match:
-- Constructor pattern (lines 10-20)
+- Constructor pattern (dependency injection)
 - Method structure (public methods call private helpers)
 - Error handling (try/catch with telemetry logging)
 - Return types (explicit Promise<T> with custom types)
+- Input validation approach
 ```
 
-Point to specific sections if the file is long. AI can read the whole file but benefits from knowing what matters.
+Point to specific patterns if the file is long. AI can read the whole file but benefits from knowing what matters.
 
-**3. Call out what to preserve**
+## What Patterns Are Worth Teaching?
 
-```
-Keep these patterns from CardService:
-- Dependency injection in constructor
-- Private methods prefixed with underscore
-- Database operations in private methods
-- All public methods logged with telemetry
+Not everything needs a reference example. Save this technique for patterns that:
 
-Change only:
-- Entity type (Trade instead of Card)
-- Business logic specific to trades
-```
+**Repeat across your codebase.** If you have 20 services that all follow the same structure, showing AI one example pays off on the other 19.
 
-This tells AI what's the pattern (copy it) vs what's the content (adapt it).
+**Are easy to get wrong.** Error handling, logging, validation. The stuff that's boring to write but critical to get right.
 
-## Different Types of Examples
+**Define your codebase's character.** The patterns that make your code feel like your code. When someone opens a file, they should know immediately they're in your codebase.
 
-### Service Pattern Example
+**AI consistently misses.** If you've described something twice and AI still gets it wrong, stop describing. Start showing.
+
+## Different Types of References
+
+### Service Structure
 
 ```
-Create NotificationService following server/services/CardService.ts.
+Create OrderService following server/services/UserService.ts.
 
 Same patterns:
 - Constructor takes db and logger
@@ -100,16 +99,16 @@ Same patterns:
 - Error handling with telemetry
 
 Different content:
-- Operations: sendEmail, sendPush, getNotificationHistory
-- Tables: notifications, notification_preferences
+- Operations: createOrder, getOrder, cancelOrder
+- Tables: orders, order_items
 ```
 
-### Route Pattern Example
+### Route Patterns
 
 ```
-Add routes for trades at server/routes/trades.ts.
+Add routes for orders at server/routes/orders.ts.
 
-Reference: server/routes/cards.ts
+Reference: server/routes/users.ts
 
 Copy:
 - Router setup pattern
@@ -118,37 +117,17 @@ Copy:
 - Request typing approach
 
 New content:
-- POST /trades (create trade offer)
-- GET /trades/:id (get trade details)
-- POST /trades/:id/accept (accept trade)
-- POST /trades/:id/decline (decline trade)
+- POST /orders (create order)
+- GET /orders/:id (get order details)
+- DELETE /orders/:id (cancel order)
 ```
 
-### Component Pattern Example
+### Test Structure
 
 ```
-Build a TradeCard component in client/components/TradeCard.tsx.
+Write tests for OrderService in server/services/OrderService.test.ts.
 
-Reference: client/components/CardDisplay.tsx
-
-Match:
-- Props interface at top
-- Styled-components pattern
-- Loading state handling
-- Error boundary pattern
-
-Content:
-- Display trade offer between two users
-- Show cards being traded each direction
-- Accept/decline buttons for recipient
-```
-
-### Test Pattern Example
-
-```
-Write tests for TradeService in server/services/TradeService.test.ts.
-
-Reference: server/services/CardService.test.ts
+Reference: server/services/UserService.test.ts
 
 Copy exactly:
 - Test file structure (describe blocks)
@@ -157,40 +136,59 @@ Copy exactly:
 - Assertion style
 
 Test these scenarios:
-- Create trade offer
-- Accept trade (swap cards)
-- Decline trade
-- Cancel trade (by creator)
-- Expired trade handling
+- Create order with valid items
+- Create order with empty cart (should fail)
+- Get order by ID
+- Cancel order
+- Cancel already-cancelled order (should fail)
 ```
 
-## When Examples Work Best
+### Component Patterns
 
-Examples are powerful but not always necessary. Use them when:
+```
+Build an OrderSummary component in client/components/OrderSummary.tsx.
 
-**Building something similar to existing code.** New service like existing service. New component like existing component. New route like existing route.
+Reference: client/components/UserProfile.tsx
 
-**Matching style is important.** Team codebases. Open source contributions. Anywhere consistency matters.
+Match:
+- Props interface at top
+- Styled-components pattern
+- Loading state handling
+- Error boundary pattern
 
-**The pattern is complex.** Simple things don't need examples. Complex patterns (state machines, event handlers, middleware chains) benefit from concrete references.
-
-**AI keeps getting it wrong.** If you've described something twice and AI still misses it, show an example. Works better than more words.
+Content:
+- Display order details
+- Show line items with prices
+- Total calculation
+- Status indicator
+```
 
 ## Making Your Best Code Easy to Reference
 
 Some files become your go-to references. Make them good:
 
-**Keep them clean.** Your reference files are templates. Keep them well-commented, well-structured, exemplary.
+**Keep them clean.** Your reference files are templates. They should be well-structured and exemplary.
 
 **Keep them current.** When patterns evolve, update reference files first. They're the source of truth.
 
-**Keep them documented.** Add a comment at the top: "This file is used as a pattern reference for new services."
+**Keep them discoverable.** Mention them in CLAUDE.md:
 
-**Keep them discoverable.** Mention them in CLAUDE.md. "For service patterns, reference server/services/CardService.ts."
+```markdown
+## Reference Files
+
+When building new code, reference these files for patterns:
+
+- Services: server/services/UserService.ts
+- Routes: server/routes/users.ts
+- Components: client/components/UserProfile.tsx
+- Tests: server/services/UserService.test.ts
+```
+
+Now AI knows where to look without you specifying each time.
 
 ## The Pattern Library Approach
 
-Some teams create explicit pattern files:
+Some teams create explicit pattern files that aren't part of the running application. Just templates:
 
 ```
 patterns/
@@ -200,7 +198,7 @@ patterns/
   test-pattern.test.ts     # Template test
 ```
 
-These aren't runnable code. They're templates with comments:
+These files include comments explaining the pattern:
 
 ```typescript
 // patterns/service-pattern.ts
@@ -247,72 +245,51 @@ export class ExampleService {
 Reference these in prompts:
 
 ```
-Build UserPreferencesService following patterns/service-pattern.ts.
+Build PaymentService following patterns/service-pattern.ts.
 ```
-
-## Combining Examples with Configuration
-
-Your CLAUDE.md (from Day 10) can reference example files:
-
-```markdown
-## Reference Files
-
-When building new code, reference these files for patterns:
-
-- Services: server/services/CardService.ts
-- Routes: server/routes/cards.ts
-- Components: client/components/CardDisplay.tsx
-- Tests: server/services/CardService.test.ts
-- Migrations: server/migrations/20240101_create_cards.ts
-```
-
-Now AI knows where to look without you specifying each time.
 
 ## When AI Misses the Pattern
 
-Sometimes AI reads the example but still misses something. Be specific:
+Sometimes AI reads the example but still misses something. Be specific about the mismatch:
 
 ```
-The TradeService you generated doesn't match CardService.
+The OrderService you generated doesn't match UserService.
 
-In CardService:
+In UserService:
 - All database calls are in private methods (lines 45-80)
 - Public methods only contain business logic
 
-In your TradeService:
-- createTrade has inline database calls
+In your OrderService:
+- createOrder has inline database calls
 
-Refactor to match the CardService pattern exactly.
+Refactor to match the UserService pattern exactly.
 ```
 
 Point to the specific mismatch. AI can fix targeted issues better than vague "make it match."
 
-## The Feedback Loop
+## Why Examples Beat Descriptions
 
-Over time, you build intuition for which examples work:
+When you describe a pattern in words, there's interpretation. "Use dependency injection" could mean constructor injection, property injection, or a service locator. "Handle errors properly" means different things to every developer.
 
-1. Reference an example
-2. Check if AI matched the pattern
-3. If not, figure out why (example unclear? AI missed something?)
-4. Improve the example or be more specific next time
+When you show an example, there's no interpretation. The code is the spec. AI sees exactly what you mean.
 
-Good reference files get refined through use. Bad ones get replaced.
+This is the same principle from Day 3 with the design system. AI is better at reading code than reading prose. Code shows. Documentation describes. Showing wins.
 
 ## Tomorrow
 
 Your AI knows your standards (Day 10) and your patterns (today). But what about the mistakes it keeps making? The same wrong assumptions. The same bad habits.
 
-Tomorrow I'll show you how to build a "common AI mistakes" file. Document the mistakes once, reference it in prompts, stop repeating corrections.
+Tomorrow I'll show you how to build a "common mistakes" file. Document the mistakes once, reference it in prompts, stop repeating corrections.
 
 ---
 
 ## Try This Today
 
-1. Find your best service/component/route file. The one that exemplifies your patterns.
+1. Find your best service, component, or route file. The one that exemplifies your patterns.
 2. Ask AI to build something similar: "Create X following the pattern in Y"
 3. Compare the output to your original. Did AI match the structure?
-4. Note what matched and what didn't
-5. Refine your prompt to call out specific patterns that matter
+4. Note what matched and what didn't.
+5. Refine your prompt to call out specific patterns that matter.
 
 The first time you see AI perfectly match your codebase style, you'll understand why examples beat descriptions.
 
