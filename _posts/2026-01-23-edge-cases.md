@@ -66,7 +66,7 @@ AI's edge case analysis:
 - Right-to-left characters → Display order issues
 - Very long names → UI overflow
 - Names with quotes → "John O'Brien" (apostrophe might cause issues in certain contexts)
-- Names with HTML → "<script>alert()</script>" (XSS if not escaped)
+- Names with HTML → `<script>alert()</script>` (XSS if not escaped)
 
 **Type Issues:**
 - `user` is null → TypeError
