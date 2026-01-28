@@ -185,12 +185,7 @@ I lean toward multiple tools because the differences matter for my work. But sim
 
 ## Cost Considerations
 
-AI tools range from free to expensive:
-
-- **Free:** Copilot (for students/OSS), Codeium, limited ChatGPT
-- **$10-20/month:** ChatGPT Plus, Copilot Individual
-- **$20-50/month:** Claude Pro, Cursor Pro
-- **Usage-based:** Claude Code, API access
+AI tools range from free to expensive. I use ChatGPT Pro ($20), Claude Code Max ($100), and GitHub Copilot from my employer.
 
 For professional use, the cost is usually justified by time saved. For learning or light use, free tiers work fine.
 
