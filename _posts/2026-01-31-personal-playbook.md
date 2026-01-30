@@ -8,7 +8,7 @@ excerpt: "You've learned 30 days of tactics. Now make it yours. Build your perso
 
 You made it.
 
-Thirty days of tactics, prompts, and practices. That's a lot. Too much to use all at once. Too much to remember without a system.
+Thirty-one days of tactics, prompts, and practices. That's a lot. Too much to use all at once. Too much to remember without a system.
 
 Today we build your personal playbook. Not everything from this series. Just what works for you. A reference you'll actually use. A foundation you'll build on.
 
@@ -262,7 +262,7 @@ Ship it. Then tell me about it.
 
 ## Thank You
 
-If you've followed along for 31 days, thank you. I hope you ship faster and with more confidence.
+If you've followed along for all 31 days, thank you. I hope you ship faster and with more confidence.
 
 Vibe coding isn't about AI doing your work. It's about you doing better work with AI's help. Stay in flow. Trust your judgment. Keep the AI as your assistant, not your replacement.
 
