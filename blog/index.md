@@ -22,7 +22,7 @@ All posts about vibe coding and AI-assisted development.
 {% endfor %}
 </ul>
 {% else %}
-<p><em>No blog posts yet. Check back soon!</em></p>
+<p><em>All of the 31 articles are available as links at the top of the page.  This site is becoming a blog about AI-assisted software development on February 6, 2026!</em></p>
 {% endif %}
 
 <style>
