@@ -4,18 +4,7 @@ layout: default
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <div class="post-title-row">
-      <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-      {%- assign day_num = page.date | date: "%-d" -%}
-      {%- if day_num and page.category != "blog" -%}
-      {%- assign day_padded = page.date | date: "%d" -%}
-      <a href="https://github.com/imaginasean/31Days/raw/main/output/audio/day_{{ day_padded }}.mp3" class="audio-box" title="Listen to audio version">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-          <path d="M12 1c-4.97 0-9 4.03-9 9v7c0 1.66 1.34 3 3 3h3v-8H5v-2c0-3.87 3.13-7 7-7s7 3.13 7 7v2h-4v8h3c1.66 0 3-1.34 3-3v-7c0-4.97-4.03-9-9-9z"/>
-        </svg>
-      </a>
-      {%- endif -%}
-    </div>
+    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
     <p class="post-meta">
       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
@@ -30,23 +19,35 @@ layout: default
     {{ content }}
   </div>
 
-  {%- if page.next or page.previous -%}
-  <div class="post-navigation">
-    {%- if page.previous -%}
-      <div class="previous">
-        <a href="{{ page.previous.url | relative_url }}" rel="prev">← {{ page.previous.title }}</a>
-      </div>
+  {%- comment -%}Blog post navigation - iterate through posts with category: blog{%- endcomment -%}
+  {%- assign blog_posts = site.posts | where: "category", "blog" -%}
+  {%- assign sorted_blog = blog_posts | sort: 'date' | reverse -%}
+  {%- assign current_index = nil -%}
+  {%- for post in sorted_blog -%}
+    {%- if post.url == page.url -%}
+      {%- assign current_index = forloop.index0 -%}
     {%- endif -%}
-    {%- if page.next -%}
+  {%- endfor -%}
+
+  {%- if current_index != nil -%}
+  <div class="post-navigation">
+    {%- assign prev_index = current_index | plus: 1 -%}
+    {%- assign next_index = current_index | minus: 1 -%}
+    {%- if prev_index < sorted_blog.size -%}
+      {%- assign prev_post = sorted_blog[prev_index] -%}
+      <div class="previous">
+        <a href="{{ prev_post.url | relative_url }}" rel="prev">← {{ prev_post.title }}</a>
+      </div>
+    {%- else -%}
+      <div class="previous"></div>
+    {%- endif -%}
+    {%- if next_index >= 0 -%}
+      {%- assign next_post = sorted_blog[next_index] -%}
       <div class="next">
-        <a href="{{ page.next.url | relative_url }}" rel="next">{{ page.next.title }} →</a>
+        <a href="{{ next_post.url | relative_url }}" rel="next">{{ next_post.title }} →</a>
       </div>
     {%- endif -%}
   </div>
-  {%- endif -%}
-
-  {%- if site.disqus.shortname -%}
-    {%- include disqus_comments.html -%}
   {%- endif -%}
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
@@ -54,8 +55,8 @@ layout: default
 
 <!-- Email Subscribe Form -->
 <div class="subscribe-box">
-  <h3>Get new articles in your inbox</h3>
-  <p>Subscribe to get each day's article delivered directly to you.</p>
+  <h3>Stay updated on vibe coding</h3>
+  <p>Get new articles delivered to your inbox every Friday.</p>
   <form
     action="https://buttondown.com/api/emails/embed-subscribe/jeffblankenburg"
     method="post"
@@ -80,49 +81,6 @@ layout: default
 </script>
 
 <style>
-.post-title-row {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.post-title-row .post-title {
-  flex: 1;
-  margin: 0;
-}
-
-.audio-box {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background: #002d46;
-  color: #fdbe01;
-  text-decoration: none;
-  border-radius: 6px;
-  transition: all 0.2s ease;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  flex-shrink: 0;
-  margin-top: 0.25rem;
-}
-
-.audio-box:hover {
-  background: #fdbe01;
-  color: #002d46;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-}
-
-.audio-box:visited {
-  color: #fdbe01;
-}
-
-.audio-box:hover:visited {
-  color: #002d46;
-}
-
 .post-navigation {
   display: flex;
   justify-content: space-between;

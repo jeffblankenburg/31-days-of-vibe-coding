@@ -1,0 +1,28 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.title }} Blog</title>
+    <description>Ongoing vibe coding insights from Jeff Blankenburg</description>
+    <link>{{ site.url }}/blog/</link>
+    <atom:link href="{{ site.url }}/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    {%- assign blog_posts = site.posts | where: "category", "blog" -%}
+    {%- assign sorted_blog = blog_posts | sort: 'date' | reverse -%}
+    {%- for post in sorted_blog limit:20 -%}
+    <item>
+      <title>{{ post.title | xml_escape }}</title>
+      <description>{{ post.excerpt | xml_escape }}</description>
+      <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+      <link>{{ site.url }}{{ post.url }}</link>
+      <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+      {%- if post.author -%}
+      <author>{{ site.email }} ({{ post.author }})</author>
+      {%- endif -%}
+    </item>
+    {%- endfor -%}
+  </channel>
+</rss>

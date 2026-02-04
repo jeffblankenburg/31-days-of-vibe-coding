@@ -1,0 +1,136 @@
+---
+layout: default
+---
+
+<div class="home">
+  {{ content }}
+
+  {%- comment -%}Get blog posts (category: blog) - future posts excluded by Jekyll's future: false{%- endcomment -%}
+  {%- assign blog_posts = site.posts | where: "category", "blog" -%}
+  {%- assign sorted_blog = blog_posts | sort: 'date' | reverse -%}
+
+  {%- if sorted_blog.size > 0 -%}
+    {%- assign latest = sorted_blog.first -%}
+
+    <article class="featured-article">
+      <h1><a href="{{ latest.url | relative_url }}">{{ latest.title }}</a></h1>
+      <time class="post-date">{{ latest.date | date: "%B %-d, %Y" }}</time>
+      <div class="article-content">
+        {{ latest.content }}
+      </div>
+    </article>
+
+    {%- if sorted_blog.size > 1 -%}
+      <h2>Recent</h2>
+      <ul class="post-list">
+        {%- for post in sorted_blog offset:1 limit:5 -%}
+          <li>
+            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+
+    <p class="archive-link"><a href="/blog/">View all posts</a></p>
+
+  {%- else -%}
+    <p class="no-posts">No blog posts yet. Check back soon!</p>
+  {%- endif -%}
+</div>
+
+<style>
+.home h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #002d46;
+}
+
+.featured-article {
+  margin-bottom: 2rem;
+}
+
+.featured-article h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.75rem;
+}
+
+.featured-article h1 a {
+  color: #002d46;
+  text-decoration: none;
+}
+
+.featured-article h1 a:hover {
+  color: #fdbe01;
+}
+
+.featured-article .post-date {
+  display: block;
+  color: #6c757d;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.featured-article .excerpt {
+  margin: 0 0 1rem 0;
+  color: #333;
+  line-height: 1.6;
+}
+
+.featured-article .read-more {
+  display: inline-block;
+  color: #002d46;
+  font-weight: 600;
+}
+
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.post-list li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.post-list li:last-child {
+  border-bottom: none;
+}
+
+.post-list .post-meta {
+  color: #6c757d;
+  font-size: 0.85rem;
+  margin-right: 0.5rem;
+}
+
+.post-list a {
+  color: #002d46;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.post-list a:hover {
+  color: #fdbe01;
+}
+
+.archive-link {
+  margin-top: 1.5rem;
+}
+
+.archive-link a {
+  color: #002d46;
+  font-weight: 600;
+}
+
+.archive-link a:hover {
+  color: #fdbe01;
+}
+
+.no-posts {
+  color: #6c757d;
+  font-style: italic;
+  margin: 2rem 0;
+}
+</style>

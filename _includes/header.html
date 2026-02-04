@@ -22,9 +22,23 @@
               </svg>
             </a>
           {% endif %}
+          {% if page.url == "/31-days/" %}
+            <a href="/31-days/" class="day-box series-box active" title="31 Days Series">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/>
+              </svg>
+            </a>
+          {% else %}
+            <a href="/31-days/" class="day-box series-box" title="31 Days Series">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/>
+              </svg>
+            </a>
+          {% endif %}
           {% assign sorted_posts = site.posts | sort: 'date' %}
           {% for post in sorted_posts %}
-            {% comment %}Show all posts if show_all_posts is true, otherwise only show published{% endcomment %}
+            {% comment %}Only show series posts (not blog posts) in navigation{% endcomment %}
+            {% if post.category == "blog" %}{% continue %}{% endif %}
             {% if site.show_all_posts or post.date <= site.time %}
               {% assign day_number = post.date | date: "%-d" %}
               {% if page.url == post.url %}
@@ -158,6 +172,10 @@
 
 .home-box {
   font-size: 20px;
+}
+
+.series-box {
+  font-size: 18px;
 }
 
 .subscribe-dropdown {
