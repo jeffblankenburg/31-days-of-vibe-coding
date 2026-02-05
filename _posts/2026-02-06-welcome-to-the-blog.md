@@ -7,6 +7,8 @@ layout: blog
 permalink: /blog/:year/:month/:day/:title/
 ---
 
+![Welcome to the blog!](/images/02062026_header.png)
+
 For a 31-day series, I had to write much of the content ahead of time.  Most of it was completed in November or December 2025. The world of artificial intelligence is moving so quickly, it almost feels like the moment you post something, it's out of date.  This series still stands on its own.  I tried not to lean too heavily on any specific agent or technology to keep the perspectives timeless.
 
 ## Audio Versions of the Series
@@ -52,7 +54,7 @@ I also built another app that is for the Super Bowl game this Sunday.  My sister
 * SMS verification for login
 * Administrative tools to managing users and payment tracking, as well as the ability to enter results as they happen.
 * Full leaderboard
-* Profile Management
+* Profile management
 
 I can't even express how fun software development has become for me again.  Until next week!
 
