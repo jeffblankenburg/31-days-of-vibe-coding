@@ -20,6 +20,16 @@ layout: default
       </div>
     </article>
 
+    <!-- Utterances Comments for featured article -->
+    <script src="https://utteranc.es/client.js"
+            repo="jeffblankenburg/31-days-of-vibe-coding"
+            issue-term="{{ latest.url }}"
+            label="comment"
+            theme="github-dark"
+            crossorigin="anonymous"
+            async>
+    </script>
+
     {%- if sorted_blog.size > 1 -%}
       <h2>Recent</h2>
       <ul class="post-list">
