@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>31 Days of Vibe Coding - Complete Series</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0a1929 0%, #0d2136 50%, #0f2847 100%);
+            min-height: 100vh;
+            padding: 40px;
+            color: white;
+        }
+
+        .slide {
+            width: 1920px;
+            min-height: 1080px;
+            background: linear-gradient(135deg, #0a1929 0%, #0d2136 50%, #0f2847 100%);
+            padding: 50px 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Subtle binary pattern overlay */
+        .slide::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                radial-gradient(circle at 20% 80%, rgba(255, 165, 0, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(0, 191, 255, 0.03) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .title {
+            font-family: 'Pacifico', cursive;
+            font-size: 72px;
+            background: linear-gradient(180deg, #ffd700 0%, #ff8c00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 4px 30px rgba(255, 165, 0, 0.3);
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 24px;
+            color: #8ba3bc;
+            font-weight: 400;
+            letter-spacing: 2px;
+        }
+
+        .weeks-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .week {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .week-header {
+            font-size: 18px;
+            font-weight: 700;
+            color: #00d4aa;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid rgba(0, 212, 170, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .day {
+            margin-bottom: 18px;
+        }
+
+        .day:last-child {
+            margin-bottom: 0;
+        }
+
+        .day-number {
+            font-size: 14px;
+            font-weight: 700;
+            color: #ffc107;
+            margin-bottom: 4px;
+        }
+
+        .day-title {
+            font-size: 14px;
+            color: #d4e3f3;
+            line-height: 1.4;
+            font-weight: 400;
+        }
+
+        .decorative-lines {
+            position: absolute;
+            bottom: 60px;
+            left: 0;
+            right: 0;
+            height: 120px;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .line {
+            position: absolute;
+            height: 3px;
+            background: linear-gradient(90deg, transparent 0%, #ffc107 20%, #ff8c00 50%, #ffc107 80%, transparent 100%);
+            border-radius: 2px;
+        }
+
+        .line-1 {
+            bottom: 80px;
+            left: 5%;
+            width: 90%;
+            transform: rotate(-2deg);
+        }
+
+        .line-2 {
+            bottom: 50px;
+            left: 10%;
+            width: 80%;
+            transform: rotate(1deg);
+        }
+
+        .line-3 {
+            bottom: 20px;
+            left: 15%;
+            width: 70%;
+            transform: rotate(-1deg);
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 25px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .footer-text {
+            font-size: 16px;
+            color: #6b8299;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="header">
+            <h1 class="title">31 Days of Vibe Coding</h1>
+            <p class="subtitle">Complete Article Series</p>
+        </div>
+
+        <div class="weeks-container">
+            <!-- Week 1 -->
+            <div class="week">
+                <h2 class="week-header">Week 1: Foundation</h2>
+                <div class="day">
+                    <div class="day-number">Day 1</div>
+                    <div class="day-title">What Is Vibe Coding?</div>
+                </div>
+                <div class="day">
+                    <div class="day-number">Day 2</div>
+                    <div class="day-title">GitHub Issues Are Your AI's Product Backlog</div>
+                </div>
+                <div class="day">
+                    <div class="day-number">Day 3</div>
+                    <div class="day-title">Component Libraries & Style Guides</div>
+                </div>
+                <div class="day">
+                    <div class="day-number">Day 4</div>
+                    <div class="day-title">Observability First: Know When AI Code Breaks</div>
+                </div>
+                <div class="day">
+                    <div class="day-number">Day 5</div>
+                    <div class="day-title">The Prompting Pattern That Actually Works</div>
+                </div>
+                <div class="day">
+                    <div class="day-number">Day 6</div>
+                    <div class="day-title">Breaking Features Into Phases</div>
+                </div>
+                <div class="day">
+                    <div class="day-number">Day 7</div>
+                    <div class="day-title">Context Management: What to Include</div>
+                </div>
+            </div>
+
+            <!-- Week 2 -->
+            <div class="week">
+                <h2 class="week-header">Week 2: Tactics</h2>
+                <div class="day">
+                    <div class="day-number">Day 8</div>
+                    <div class="day-title">When to Restart vs When to Keep Going</div>
+                </div>
+                <div class="day">
+                    <div class="day-number">Day 9</div>
+                    <div class="day-title">Git Is Your Undo Button for AI Mistakes</div>
+                </div>
+                <div class="day">
+                    <div class="day-number">Day 10</div>
+                    <div class="day-title">Agent Configuration: Set Your Standards Once</div>
+                </div>
+                <div class="day">
+                    <div class="day-number">Day 11</div>
+                    <div class="day-title">Teaching AI Your Patterns With Examples</div>
+                </div>
+                <div class="day">
+                    <div class="day-number">Day 12</div>
+                    <div class="day-title">The "Common AI Mistakes" File</div>
+                </div>
+                <div class="day">
+                    <div class="day-number">Day 13</div>
+                    <div class="day-title">Stop AI From Changing What You Didn't Ask For</div>
+                </div>
+                <div class="day">
+                    <div class="day-number">Day 14</div>
+                    <div class="day-title">When AI Starts Hallucinating</div>
+                </div>
+            </div>
+
+            <!-- Week 3 -->
+            <div class="week">
+                <h2 class="week-header">Week 3: Expert Roles</h2>
+                <div class="day">
+                    <div class="day-number">Day 15</div>
+                    <div class="day-title">Context, Tokens, and When to Compact</div>
+                </div>
+                <div class="day">
+                    <div class="day-number">Day 16</div>
+                    <div class="day-title">AI as Security Auditor</div>
+                </div>
+                <div class="day">
+                    <div class="day-number">Day 17</div>
+                    <div class="day-title">AI as SRE: Is This Code Operable?</div>
+                </div>
+                <div class="day">
+                    <div class="day-number">Day 18</div>
+                    <div class="day-title">AI as Test Generator</div>
+                </div>
+                <div class="day">
+                    <div class="day-number">Day 19</div>
+                    <div class="day-title">AI as Code Reviewer</div>
+                </div>
+                <div class="day">
+                    <div class="day-number">Day 20</div>
+                    <div class="day-title">AI as Debugger: Systematic Bug Hunting</div>
+                </div>
+                <div class="day">
+                    <div class="day-number">Day 21</div>
+                    <div class="day-title">AI as Architect</div>
+                </div>
+            </div>
+
+            <!-- Week 4 -->
+            <div class="week">
+                <h2 class="week-header">Week 4: Production</h2>
+                <div class="day">
+                    <div class="day-number">Day 22</div>
+                    <div class="day-title">Production Debugging: When It's On Fire</div>
+                </div>
+                <div class="day">
+                    <div class="day-number">Day 23</div>
+                    <div class="day-title">Asking AI for Edge Cases You'd Never Think Of</div>
+                </div>
+                <div class="day">
+                    <div class="day-number">Day 24</div>
+                    <div class="day-title">Deployment Automation</div>
+                </div>
+                <div class="day">
+                    <div class="day-number">Day 25</div>
+                    <div class="day-title">Refactoring AI Code: From Working to Maintainable</div>
+                </div>
+                <div class="day">
+                    <div class="day-number">Day 26</div>
+                    <div class="day-title">Working Across Multiple Services</div>
+                </div>
+                <div class="day">
+                    <div class="day-number">Day 27</div>
+                    <div class="day-title">Building Your Prompt Library</div>
+                </div>
+                <div class="day">
+                    <div class="day-number">Day 28</div>
+                    <div class="day-title">The AI Tool Landscape: When to Use What</div>
+                </div>
+            </div>
+
+            <!-- Week 5 -->
+            <div class="week">
+                <h2 class="week-header">Week 5: Mastery</h2>
+                <div class="day">
+                    <div class="day-number">Day 29</div>
+                    <div class="day-title">Measuring What Matters: Is AI Actually Helping?</div>
+                </div>
+                <div class="day">
+                    <div class="day-number">Day 30</div>
+                    <div class="day-title">Managing Technical Debt When Shipping Fast</div>
+                </div>
+                <div class="day">
+                    <div class="day-number">Day 31</div>
+                    <div class="day-title">Your Personal Vibe Coding Playbook</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="decorative-lines">
+            <div class="line line-1"></div>
+            <div class="line line-2"></div>
+            <div class="line line-3"></div>
+        </div>
+
+        <div class="footer">
+            <p class="footer-text">31daysofvibecoding.com</p>
+        </div>
+    </div>
+</body>
+</html>

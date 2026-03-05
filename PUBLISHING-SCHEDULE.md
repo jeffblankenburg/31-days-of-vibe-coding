@@ -4,63 +4,58 @@
 
 Posts are automatically published based on their date. Posts with future dates will NOT appear on the site until that date arrives.
 
-## Complete Schedule (January 2025)
+## Complete Schedule (January 2026)
 
-### Week 1: Introduction + The 10 Fundamentals (Start)
-
-| Day | Date | File Name | Title |
-|-----|------|-----------|-------|
-| 1 | 2025-01-01 | `2025-01-01-what-is-vibe-coding.md` | ✅ What Is Vibe Coding? |
-| 2 | 2025-01-02 | `2025-01-02-plan-features-not-functions.md` | ✅ Fundamental #1: Plan Features, Not Functions |
-| 3 | 2025-01-03 | `2025-01-03-tests-are-your-specification.md` | Fundamental #2: Tests Are Your Specification |
-| 4 | 2025-01-04 | `2025-01-04-observability-is-proof.md` | Fundamental #3: Observability Is Proof |
-| 5 | 2025-01-05 | `2025-01-05-automate-verification.md` | Fundamental #4: Automate Verification |
-| 6 | 2025-01-06 | `2025-01-06-every-deployment-reversible.md` | Fundamental #5: Every Deployment Must Be Reversible |
-| 7 | 2025-01-07 | `2025-01-07-security-is-automated.md` | Fundamental #6: Security Is Automated or It Doesn't Exist |
-
-### Week 2: The 10 Fundamentals (Continued)
+### Week 1: Foundation - Learning to Work With AI
 
 | Day | Date | File Name | Title |
 |-----|------|-----------|-------|
-| 8 | 2025-01-08 | `2025-01-08-trust-but-verify.md` | Fundamental #7: Trust the AI, Verify Everything |
-| 9 | 2025-01-09 | `2025-01-09-stay-in-flow.md` | Fundamental #8: Stay in Flow, Ship with Confidence |
-| 10 | 2025-01-10 | `2025-01-10-when-to-override-ai.md` | Fundamental #9: When to Override the AI |
-| 11 | 2025-01-11 | `2025-01-11-viral-ready-checklist.md` | Fundamental #10: The Viral-Ready Checklist |
-| 12 | 2025-01-12 | `2025-01-12-component-libraries.md` | Component Libraries: Show AI What Good Looks Like |
-| 13 | 2025-01-13 | `2025-01-13-breaking-features-into-phases.md` | Breaking Features Into Phases |
-| 14 | 2025-01-14 | `2025-01-14-context-management.md` | Context Management Across Sessions |
+| 1 | 2026-01-01 | `2026-01-01-what-is-vibe-coding.md` | What Is Vibe Coding? |
+| 2 | 2026-01-02 | `2026-01-02-github-issues-are-your-product-backlog.md` | GitHub Issues Are Your AI's Product Backlog |
+| 3 | 2026-01-03 | `2026-01-03-component-libraries-and-style-guides.md` | Component Libraries & Style Guides: Show AI What Good Looks Like |
+| 4 | 2026-01-04 | `2026-01-04-observability-first.md` | Observability First: Know When AI Code Breaks |
+| 5 | 2026-01-05 | `2026-01-05-the-prompting-pattern-that-actually-works.md` | The Prompting Pattern That Actually Works |
+| 6 | 2026-01-06 | `2026-01-06-breaking-features-into-phases.md` | Breaking Features Into Phases (Don't Build It All At Once) |
+| 7 | 2026-01-07 | `2026-01-07-context-management.md` | Context Management: What to Include, When to Start Fresh |
 
-### Week 3: Tactics & Best Practices
-
-| Day | Date | File Name | Title |
-|-----|------|-----------|-------|
-| 15 | 2025-01-15 | `2025-01-15-prompt-templates.md` | Prompt Templates That Actually Work |
-| 16 | 2025-01-16 | `2025-01-16-ai-as-security-auditor.md` | Using AI as Your Security Auditor |
-| 17 | 2025-01-17 | `2025-01-17-ai-as-performance-reviewer.md` | Using AI as Your Performance Reviewer |
-| 18 | 2025-01-18 | `2025-01-18-ai-as-debugger.md` | Using AI as Your Debugger |
-| 19 | 2025-01-19 | `2025-01-19-when-to-restart.md` | When to Restart vs When to Keep Going |
-| 20 | 2025-01-20 | `2025-01-20-agent-configuration.md` | Agent Configuration: Set Your Standards Once |
-| 21 | 2025-01-21 | `2025-01-21-multi-agent-workflows.md` | Multi-Agent Workflows |
-
-### Week 4: Advanced Tactics
+### Week 2: Tactics - Managing AI's Quirks
 
 | Day | Date | File Name | Title |
 |-----|------|-----------|-------|
-| 22 | 2025-01-22 | `2025-01-22-error-pattern-recognition.md` | Error Pattern Recognition |
-| 23 | 2025-01-23 | `2025-01-23-refactoring-with-ai.md` | Refactoring with AI |
-| 24 | 2025-01-24 | `2025-01-24-documentation-as-code.md` | Documentation as Code |
-| 25 | 2025-01-25 | `2025-01-25-api-design-with-ai.md` | API Design with AI |
-| 26 | 2025-01-26 | `2025-01-26-database-schema-evolution.md` | Database Schema Evolution |
-| 27 | 2025-01-27 | `2025-01-27-deployment-strategies.md` | Deployment Strategies |
-| 28 | 2025-01-28 | `2025-01-28-monitoring-ai-generated-code.md` | Monitoring AI-Generated Code in Production |
+| 8 | 2026-01-08 | `2026-01-08-when-to-restart-vs-keep-going.md` | When to Restart vs When to Keep Going |
+| 9 | 2026-01-09 | `2026-01-09-git-is-your-undo-button.md` | Git Is Your Undo Button for AI Mistakes |
+| 10 | 2026-01-10 | `2026-01-10-agent-configuration.md` | Agent Configuration: Set Your Standards Once |
+| 11 | 2026-01-11 | `2026-01-11-teaching-ai-your-patterns.md` | Teaching AI Your Patterns With Examples |
+| 12 | 2026-01-12 | `2026-01-12-common-ai-mistakes-file.md` | The "Common AI Mistakes" File That Saves Your Sanity |
+| 13 | 2026-01-13 | `2026-01-13-stop-ai-from-changing-everything.md` | Stop AI From Changing What You Didn't Ask For |
+| 14 | 2026-01-14 | `2026-01-14-when-ai-hallucinates.md` | When AI Starts Hallucinating: How to Spot and Stop It |
 
-### Week 5: Wrap-Up
+### Week 3: Expert Roles - AI as Your Team
 
 | Day | Date | File Name | Title |
 |-----|------|-----------|-------|
-| 29 | 2025-01-29 | `2025-01-29-lessons-learned.md` | Lessons Learned from 3 Months of Vibe Coding |
-| 30 | 2025-01-30 | `2025-01-30-tool-landscape.md` | Tool Landscape: Claude vs ChatGPT vs Copilot vs Cursor |
-| 31 | 2025-01-31 | `2025-01-31-keep-going.md` | Keep Going: What's Next in Your Vibe Coding Journey |
+| 15 | 2026-01-15 | `2026-01-15-context-tokens-and-compacting.md` | Context, Tokens, and When to Compact |
+| 16 | 2026-01-16 | `2026-01-16-ai-as-security-auditor.md` | AI as Security Auditor: Finding Vulnerabilities You'd Miss |
+| 17 | 2026-01-17 | `2026-01-17-ai-as-sre.md` | AI as SRE: Is This Code Operable? |
+| 18 | 2026-01-18 | `2026-01-18-ai-as-test-generator.md` | AI as Test Generator: Comprehensive Test Coverage |
+| 19 | 2026-01-19 | `2026-01-19-ai-as-code-reviewer.md` | AI as Code Reviewer: Multiple Review Passes |
+| 20 | 2026-01-20 | `2026-01-20-ai-as-debugger.md` | AI as Debugger: Systematic Bug Hunting |
+| 21 | 2026-01-21 | `2026-01-21-ai-as-architect.md` | AI as Architect: Evaluating Design Decisions |
+
+### Week 4: Production & Mastery
+
+| Day | Date | File Name | Title |
+|-----|------|-----------|-------|
+| 22 | 2026-01-22 | `2026-01-22-production-debugging.md` | Production Debugging: When It's On Fire |
+| 23 | 2026-01-23 | `2026-01-23-edge-cases.md` | Asking AI for Edge Cases You'd Never Think Of |
+| 24 | 2026-01-24 | `2026-01-24-deployment-automation.md` | Deployment Automation: Let AI Generate the Scary Parts |
+| 25 | 2026-01-25 | `2026-01-25-refactoring-ai-code.md` | Refactoring AI Code: From Working to Maintainable |
+| 26 | 2026-01-26 | `2026-01-26-multiple-services.md` | Working Across Multiple Services With AI |
+| 27 | 2026-01-27 | `2026-01-27-prompt-library.md` | Building Your Prompt Library: Capture What Works |
+| 28 | 2026-01-28 | `2026-01-28-ai-tool-landscape.md` | The AI Tool Landscape: When to Use What |
+| 29 | 2026-01-29 | `2026-01-29-measuring-what-matters.md` | Measuring What Matters: Is AI Actually Helping? |
+| 30 | 2026-01-30 | `2026-01-30-technical-debt.md` | Managing Technical Debt When Shipping Fast |
+| 31 | 2026-01-31 | `2026-01-31-personal-playbook.md` | Your Personal Vibe Coding Playbook |
 
 ## Front Matter Template
 
@@ -70,7 +65,7 @@ For each new post, use this template:
 ---
 layout: post
 title: "Day X: Your Title Here"
-date: 2025-01-XX
+date: 2026-01-XX
 author: Jeff Blankenburg
 excerpt: "Brief excerpt for homepage listing (1-2 sentences)"
 ---
@@ -80,7 +75,7 @@ excerpt: "Brief excerpt for homepage listing (1-2 sentences)"
 
 ### 1. Write All Posts in Advance
 
-Create all 31 posts with their respective dates (2025-01-01 through 2025-01-31).
+Create all 31 posts with their respective dates (2026-01-01 through 2026-01-31).
 
 ### 2. Commit and Push Everything
 
@@ -121,16 +116,11 @@ bundle exec jekyll serve --future
 
 ## Current Status
 
-- ✅ Day 1: Published (2025-01-01)
-- ✅ Day 2: Published (2025-01-02)
-- ⏳ Days 3-31: Write these posts with future dates
+- ✅ All 31 posts written
+- ⏳ Publishing starts January 1, 2026
 
 ---
 
-**Next Steps:**
-1. Write Days 3-11 (complete the fundamentals)
-2. Write Days 12-29 (tactics and best practices)
-3. Write Days 30-31 (tool landscape and send-off)
-4. Commit all posts
-5. Push to GitHub
-6. Site auto-publishes one per day!
+**Notes:**
+- All posts are dated January 2026 and will auto-publish on their respective dates
+- The site is configured with `future: false` so future posts won't appear until their date

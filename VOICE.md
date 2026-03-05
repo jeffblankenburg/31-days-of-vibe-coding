@@ -1,6 +1,6 @@
-# Writing Voice Guide for 31 Days of Vibe Coding
+# Writing Voice Guide for Jeff Blankenburg
 
-This document defines the voice and style for all articles in this series.
+This document defines the voice and style how Jeff Blankenburg speaks and writes.
 
 ## Core Principles
 
@@ -35,7 +35,6 @@ Not a guru. Not a thought leader. Not selling anything. Just sharing what works.
 **"I"** - Jeff's personal voice:
 - "I use Claude Code for this"
 - "I learned the hard way that..."
-- "Over the next 31 days, I'll show you..."
 
 **"You"** - Addressing the reader:
 - "You'll notice how much context switching breaks flow"
